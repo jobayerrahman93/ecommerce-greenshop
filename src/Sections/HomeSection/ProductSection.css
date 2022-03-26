@@ -1,0 +1,43 @@
+.category-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  color: var(--blackish-color);
+}
+
+.product-section {
+  margin-top: 40px;
+  min-height: 200vh;
+}
+
+.category-filter {
+  background: #fbfbfb;
+}
+
+.product-category-item h6 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 40px;
+  /* or 267% */
+
+  color: var(--blackish-color);
+}
+
+.filter-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 40%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.price-range p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+}
+.price-range span {
+  color: var(--primary-color);
+  font-weight: 700;
+}
