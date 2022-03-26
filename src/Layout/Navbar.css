@@ -1,0 +1,15 @@
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+}
+
+.login_btn {
+  width: 100px;
+  height: 35px;
+  border-radius: 6px !important;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  border: none;
+  text-align: center;
+}
