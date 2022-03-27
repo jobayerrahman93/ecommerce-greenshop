@@ -1,8 +1,14 @@
 import React from 'react';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import discountImg from '../../img/discount-banner.png';
+import AllPlants from './AllPlants';
 import './ProductSection.css';
 
 const ProductSection = () => {
+
+    const location = useLocation();
+
+
     return (
         <>
 
@@ -128,7 +134,58 @@ const ProductSection = () => {
 
                     </div>
                     <div className="col-lg-9">
+                        <div className="all-products-section container">
+                            <div className='d-flex'>
+                                <div>
+                                    <NavLink to="/allPlants">
+                                        All Plants
+                                    </NavLink>
+                                    <NavLink to="/newArrival">
+                                        New arrival
+                                    </NavLink>
+                                    <NavLink to="/sales">
+                                        Sales
+                                    </NavLink>
+                                </div>
 
+                                <div className='ms-auto d-flex'>
+                                    <p className='mb-0 me-2 short-by'>Sort By: </p>
+                                    <select class="form-select filter-form-select" aria-label="Default select example">
+                                        <option selected>Default Sorting</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            {
+
+
+                                location.pathname == '/' ? <AllPlants></AllPlants> : <Outlet></Outlet>
+                            }
+
+
+
+
+
+                        </div>
+
+
+                        <nav aria-label="Page navigation example ">
+                            <ul class="pagination flex justify-content-end">
+
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
