@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import discountImg from '../../img/discount-banner.png';
+import p3 from '../../img/p3.png';
+import p5 from '../../img/p5.png';
 import AllPlants from './AllPlants';
 import './ProductSection.css';
 
@@ -188,6 +190,40 @@ const ProductSection = () => {
                         </nav>
                     </div>
                 </div>
+
+                {/* find plants */}
+
+
+                <div className="row find-plants-row">
+                    <div className="col-lg-6">
+                        <div className="plants-container d-flex">
+                            <div className="left">
+                                <img src={p5} alt="" />
+                            </div>
+                            <div className="right text-end p-4">
+                                <h3 className='findPlants-title'>Summer Cactus & Succulents</h3>
+                                <p className='findPlants-subTitle'>we are an online plant shop offering a wide range of cheap and trendy plants</p>
+
+                                <button className="findBtn btn">Find More <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="plants-container d-flex">
+                            <div className="left">
+                                <img src={p3} alt="" />
+                            </div>
+                            <div className="right text-end p-4">
+                                <h3 className='findPlants-title'>Styling Trends & Much More</h3>
+                                <p className='findPlants-subTitle'>we are an online plant shop offering a wide range of cheap and trendy plants</p>
+
+                                <button className="findBtn btn">Find More <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
         </>
