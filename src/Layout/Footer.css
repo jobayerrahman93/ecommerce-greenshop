@@ -4,6 +4,7 @@ footer {
 }
 .newsletter-section {
   background: #fbfbfb;
+  padding: 24px 10px;
 }
 .newsletter-post-title {
   font-weight: 700;
@@ -56,4 +57,80 @@ footer {
 
 .subscribe-input-group {
   margin-bottom: 18px;
+}
+
+/* contact section */
+
+.contact-section {
+  background: rgba(70, 163, 88, 0.1);
+  padding: 24px 10px;
+}
+
+.contact-section p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  /* or 157% */
+
+  color: var(--blackish-color);
+}
+
+/* main footer */
+
+.main-footer {
+  padding: 24px 10px;
+
+  background: #fbfbfb;
+}
+
+.main-footer h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  margin-bottom: 20px;
+  color: var(--blackish-color);
+}
+
+.main-footer ul {
+  padding-left: 0px;
+}
+
+.main-footer ul li {
+  list-style: none;
+}
+
+.main-footer ul li a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  text-decoration: none;
+  color: var(--blackish-color);
+}
+
+.social-icon {
+  border: 1px solid rgba(70, 163, 88, 0.2);
+  border-radius: 4px;
+  padding: 7px 11px;
+  margin-right: 10px;
+}
+.social-icon img {
+  height: 16px;
+  width: 16px;
+  background-size: cover;
+}
+
+.we-accept {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  margin-top: 33px;
+  color: var(--blackish-color);
+}
+
+.copy-right p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+
+  color: #3d3d3d;
 }

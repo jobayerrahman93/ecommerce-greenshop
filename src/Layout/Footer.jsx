@@ -1,6 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import callImg from '../img/Calling.png';
+import facebookImg from "../img/Facebook.png";
+import instagramImg from "../img/Instagram.png";
+import linkedinImg from "../img/Linkedin.png";
+import locationImg from "../img/Location.png";
+import fullLogo from "../img/Logo-full.png";
+import messageImg from "../img/Message.png";
 import newsltr1 from "../img/newsltr1.png";
 import newsltr2 from "../img/newsltr2.png";
+import paymentImg from "../img/paymentImg.png";
+import twitterImg from "../img/Twitter.png";
+import uniconImg from "../img/Union.png";
 import './Footer.css';
 
 const Footer = () => {
@@ -57,6 +68,178 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+
+
+                    {/* contact section */}
+
+
+                    <div className="contact-section">
+                        <div className="row">
+                            <div className="col-lg-3">
+                                <img src={fullLogo} alt="" />
+                            </div>
+                            <div className="col-lg-3">
+                                <div className="d-flex">
+                                    <div><img src={locationImg} alt="" /></div>
+
+                                    <div><p className='ms-2'>70 West Buckingham Ave.
+                                        Farmingdale, NY 11735</p></div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3">
+                                <div className="d-flex">
+                                    <div><img src={messageImg} alt="" /></div>
+
+                                    <div><p className='ms-2'>contact@greenshop.com</p></div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3">
+                                <div className="d-flex">
+                                    <div><img src={callImg} alt="" /></div>
+
+                                    <div><p className='ms-2'>01749666529</p></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    {/* main footer section */}
+
+                    <div className="main-footer">
+                        <div className="row">
+                            <div className="col-lg-3">
+                                <h3>My Account</h3>
+
+                                <ul>
+                                    <li>
+                                        <Link to="/">
+                                            My Account
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Our stores
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Contact Us
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Career
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Specials
+                                        </Link>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div className="col-lg-3">
+                                <h3>Help & Guide</h3>
+
+                                <ul>
+                                    <li>
+                                        <Link to="/">
+                                            Help Center
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            How to Buy
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Shipping and Delivery
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Product Policy
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            How to Return
+                                        </Link>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div className="col-lg-3">
+                                <h3>Categories</h3>
+
+                                <ul>
+                                    <li>
+                                        <Link to="/">
+                                            House plants
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Potter Plants
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Seeds
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Small Plants
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            Accessories
+                                        </Link>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div className="col-lg-3">
+                                <h3>Social Media</h3>
+
+                                <div className="social-iconBox d-flex">
+                                    <div className="social-icon">
+                                        <img src={facebookImg} alt="" />
+                                    </div>
+
+                                    <div className="social-icon">
+                                        <img src={instagramImg} alt="" />
+                                    </div>
+                                    <div className="social-icon">
+                                        <img src={twitterImg} alt="" />
+                                    </div>
+                                    <div className="social-icon">
+                                        <img src={linkedinImg} alt="" />
+                                    </div>
+
+                                    <div className="social-icon">
+                                        <img src={uniconImg} alt="" />
+                                    </div>
+                                </div>
+
+                                <h3 className='we-accept'>We Accept</h3>
+                                <img src={paymentImg} alt="" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="container copy-right py-3">
+                    <p className='text-center'>© 2021 GreenShop. All Rights Reserved.</p>
                 </div>
             </footer>
         </>
