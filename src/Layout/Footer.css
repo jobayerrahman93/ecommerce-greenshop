@@ -22,3 +22,38 @@ footer {
 .newsletter-media {
   padding: 15px 0px;
 }
+
+.newsletter-subscribe-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  margin-bottom: 17px;
+  color: var(--blackish-color);
+}
+
+.newsletter-subscribe-des {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  /* or 169% */
+
+  color: var(--subtitle-color);
+}
+
+.newsletter-subscribe-btn {
+  background: var(--primary-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+
+  color: #ffffff;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.newsletter-subscribe-btn:hover {
+  color: #ffffff;
+}
+
+.subscribe-input-group {
+  margin-bottom: 18px;
+}
