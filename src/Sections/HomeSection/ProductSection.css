@@ -7,7 +7,6 @@
 
 .product-section {
   margin-top: 40px;
-  min-height: 200vh;
 }
 
 .category-filter {
@@ -36,6 +35,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
+  margin: 11px 0;
 }
 .price-range span {
   color: var(--primary-color);
@@ -117,17 +117,98 @@
   font-size: 14px;
   line-height: 24px;
   color: var(--subtitle-color);
+  margin: 5px 0 15px 0;
 }
 
 .findBtn {
   background-color: var(--primary-color);
   color: #fff;
   width: 50%;
-  font-weight: 300;
-  font-size: 16px;
   line-height: 20px;
+  width: 37%;
+  height: 20%;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .find-plants-row {
   margin-top: 146px;
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .cmn-btn {
+    width: 32%;
+    height: 14%;
+  }
+
+  .all-products-section a {
+    margin: 0 9px;
+  }
+
+  .findPlants-subTitle {
+    margin: 10px 0;
+  }
+  .findBtn {
+    width: 42%;
+  }
+  .findPlants-title {
+    font-size: 21px;
+  }
+
+  .sortBySide {
+    display: none !important;
+  }
+  .allProduct-nav {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .sortBySide {
+    display: none !important;
+  }
+  .allProduct-nav {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .sortBySide {
+    display: none !important;
+  }
+  .allProduct-nav {
+    justify-content: center;
+  }
+  .plants-container img {
+    display: none;
+  }
+  .findBtn {
+    width: 47%;
+  }
+  .cmn-btn {
+    height: 13%;
+  }
+  .price-range p {
+    margin: 11px 0;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .plants-container img {
+    display: none;
+  }
+
+  .cmn-btn {
+    height: 9%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .findBtn {
+    width: 50%;
+  }
 }

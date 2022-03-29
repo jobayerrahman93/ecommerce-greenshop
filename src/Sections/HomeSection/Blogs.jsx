@@ -14,7 +14,7 @@ const Blogs = () => {
                 </p>
 
                 <div className="row blogs-box">
-                    <div className="col-lg-3  ">
+                    <div className="col-lg-3  col-md-6">
                         <div className="blog-media">
                             <img src={blog1} className="img-fluid" alt="" />
                         </div>

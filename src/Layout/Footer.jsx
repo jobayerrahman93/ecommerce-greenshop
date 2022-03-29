@@ -22,7 +22,7 @@ const Footer = () => {
                     {/* newsletter section */}
                     <div className="newsletter-section">
                         <div className="row">
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6 col-12 mb-3 mb-md-3 mb-lg-0">
                                 <div className="newsletter-media">
                                     <img src={newsltr1} alt="" />
 
@@ -32,7 +32,7 @@ const Footer = () => {
                                     <p className='newsletter-post-des'>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6 col-12 mb-3 mb-md-0 mb-lg-0 mb-md-3">
                                 <div className="newsletter-media">
                                     <img src={newsltr2} alt="" />
 
@@ -42,7 +42,7 @@ const Footer = () => {
                                     <p className='newsletter-post-des'>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6 col-12 mb-3 mb-md-0 mb-lg-0">
                                 <div className="newsletter-media">
                                     <img src={newsltr1} alt="" />
 
@@ -55,7 +55,7 @@ const Footer = () => {
 
                             </div>
 
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6 col-12 mb-3 mb-md-0 mb-lg-0">
                                 <h3 className='newsletter-subscribe-title'>Would you like to join newsletters?</h3>
 
 
@@ -75,10 +75,10 @@ const Footer = () => {
 
                     <div className="contact-section">
                         <div className="row">
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6 col-12 mb-2 mb-md-0 mb-lg-0">
                                 <img src={fullLogo} alt="" />
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6 col-12 mb-2 mb-md-0 mb-lg-0">
                                 <div className="d-flex">
                                     <div><img src={locationImg} alt="" /></div>
 
@@ -86,14 +86,14 @@ const Footer = () => {
                                         Farmingdale, NY 11735</p></div>
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6 col-12 mb-md-0 mb-lg-0 mt-md-3">
                                 <div className="d-flex">
                                     <div><img src={messageImg} alt="" /></div>
 
                                     <div><p className='ms-2'>contact@greenshop.com</p></div>
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6 mt-md-3 col-12 mb-2 mb-md-0 mb-lg-0">
                                 <div className="d-flex">
                                     <div><img src={callImg} alt="" /></div>
 
@@ -110,7 +110,7 @@ const Footer = () => {
 
                     <div className="main-footer">
                         <div className="row">
-                            <div className="col-lg-3">
+                            <div className="col-lg-3  col-md-6">
                                 <h3>My Account</h3>
 
                                 <ul>
@@ -142,7 +142,7 @@ const Footer = () => {
 
                                 </ul>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6">
                                 <h3>Help & Guide</h3>
 
                                 <ul>
@@ -174,7 +174,7 @@ const Footer = () => {
 
                                 </ul>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6">
                                 <h3>Categories</h3>
 
                                 <ul>
@@ -207,7 +207,7 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-md-6">
                                 <h3>Social Media</h3>
 
                                 <div className="social-iconBox d-flex">
@@ -239,7 +239,7 @@ const Footer = () => {
                 </div>
 
                 <div className="container copy-right py-3">
-                    <p className='text-center'>© 2021 GreenShop. All Rights Reserved.</p>
+                    <p className='text-center'>© 2021 JobayerDevs. All Rights Reserved.</p>
                 </div>
             </footer>
         </>

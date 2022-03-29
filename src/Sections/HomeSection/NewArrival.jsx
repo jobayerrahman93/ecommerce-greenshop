@@ -5,7 +5,7 @@ const NewArrival = () => {
     return (
         <>
             <div className="row">
-                <div className="col-lg-4">
+                <div className="col-lg-4 col-md-6">
                     <div className="product-box">
                         <div className="product-media">
                             <img src={p2} className="" height="250" alt="" />

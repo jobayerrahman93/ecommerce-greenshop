@@ -6,10 +6,10 @@ const AllPlants = () => {
     return (
         <>
             <div className="row">
-                <div className="col-lg-4">
+                <div className="col-lg-4 col-md-6">
                     <div className="product-box">
                         <div className="product-media">
-                            <img src={p1} className="" height="250" alt="" />
+                            <img src={p1} className="w-100" height="250" alt="" />
 
                         </div>
                         <div>

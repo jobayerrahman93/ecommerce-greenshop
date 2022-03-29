@@ -58,3 +58,15 @@
 .blogs-box {
   margin-top: 35px;
 }
+
+@media screen and (max-width: 480px) {
+  .blogs {
+    margin-top: 0px;
+  }
+  .blogs-title {
+    font-size: 25px;
+  }
+  .blog-media img {
+    width: 100%;
+  }
+}
