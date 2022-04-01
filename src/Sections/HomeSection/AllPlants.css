@@ -1,3 +1,29 @@
 .product-media {
   background-color: #fbfbfb;
+  position: relative;
+}
+
+.cart-hover-menu {
+  position: absolute;
+  bottom: 12px;
+  left: 70px;
+  margin: 0 auto;
+  width: 52%;
+  transition: all 0.9s ease !important;
+  display: none;
+}
+
+.cart-hover-content {
+  display: flex;
+  justify-content: space-around;
+  transition: all 5s ease-in-out !important;
+}
+
+.cart-hover-menu img {
+  cursor: pointer;
+}
+
+.product-media:hover .cart-hover-menu {
+  display: block;
+  transition: all 0.9s ease !important;
 }
