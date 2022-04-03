@@ -1,0 +1,130 @@
+.login-content {
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.login-content a {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  /* identical to box height, or 80% */
+  text-decoration: none;
+  color: var(--blackish-color);
+  margin-right: 27px;
+}
+
+.registerTab::before {
+  content: "";
+  display: inline-block;
+  height: 14px;
+  width: 2px;
+  position: relative;
+  left: -11px;
+  top: 1px;
+  background-color: var(--primary-color);
+}
+
+/* user login */
+
+.userLogin-content-box {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login-title {
+  margin-bottom: 14px;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height, or 123% */
+
+  color: var(--blackish-color);
+}
+.user-login input {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  padding-left: 5px;
+  background-color: #fff !important;
+}
+.forgetPass a {
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  color: #46a358;
+  margin-top: 14px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 0px;
+}
+
+.userLoginBtn {
+  background: #46a358;
+  border-radius: 5px;
+  width: 100%;
+  height: 45px;
+  color: #fff;
+  margin-top: 27px;
+}
+
+.orLogin::before {
+  content: "";
+  display: inline-block;
+  width: 56px !important;
+  height: 3px !important;
+
+  background-color: #eaeaea;
+  margin-right: 10px;
+}
+.orLogin::after {
+  content: "";
+  display: inline-block;
+  width: 56px !important;
+  height: 3px !important;
+  margin-left: 10px;
+  background-color: #eaeaea;
+}
+
+.loginWith {
+  margin-top: 27px;
+}
+
+.loginWithBtn {
+  border: 1px solid #eaeaea;
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.fa-google {
+  color: #f03800;
+}
+
+.fa-facebook-f {
+  color: #3b5999;
+}
+
+/* register */
+
+.register-section input {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  padding-left: 5px;
+  background-color: #fff !important;
+}
+
+.register-box {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login-section input:focus-visible {
+  outline: none !important;
+}
