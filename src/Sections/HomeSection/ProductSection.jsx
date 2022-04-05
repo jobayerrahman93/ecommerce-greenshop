@@ -16,8 +16,8 @@ const ProductSection = () => {
 
             <div className="container product-section">
                 <div className="row">
-                    <div className="col-lg-3 col-md-4 d-none d-md-block d-lg-block">
-                        <div className="category-filter">
+                    <div className="col-lg-3 col-md-4 d-none d-md-block d-lg-block px-0 ">
+                        <div className="category-filter cursor-pointer">
                             <h6 className='category-title p-2'>Category</h6>
                             <div className="product-category-item ms-4">
                                 <div className="row">

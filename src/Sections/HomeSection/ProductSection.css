@@ -89,6 +89,10 @@
   border-radius: 4px;
 }
 
+.pagination .page-item:last-child {
+  margin-right: 0px;
+}
+
 .page-item .page-link {
   height: 35px;
   width: 35px;
@@ -125,7 +129,7 @@
   color: #fff;
   width: 50%;
   line-height: 20px;
-  width: 37%;
+  width: 50%;
   height: 20%;
   font-size: 16px;
   font-weight: 400;
@@ -143,7 +147,11 @@
 
   .cmn-btn {
     width: 32%;
-    height: 14%;
+    height: 20%;
+  }
+
+  .hero-title {
+    margin: 8px 0;
   }
 
   .all-products-section a {
@@ -154,7 +162,7 @@
     margin: 10px 0;
   }
   .findBtn {
-    width: 42%;
+    width: 50%;
   }
   .findPlants-title {
     font-size: 21px;

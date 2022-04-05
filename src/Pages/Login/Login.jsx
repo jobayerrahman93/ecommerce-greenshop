@@ -11,7 +11,7 @@ const Login = () => {
             <div className="login-section">
                 <div className="container">
                     <div className="login-content">
-                        <NavLink style={({ isActive }) => { return { color: isActive ? '#46a358' : '' } }} to="/login/userLogin">
+                        <NavLink style={({ isActive }) => { return { color: isActive || location.pathname == '/login' ? '#46a358' : '' } }} to="/login/userLogin">
                             Login
                         </NavLink>
                         <NavLink style={({ isActive }) => { return { color: isActive ? '#46a358' : '' } }} className="registerTab" to="/login/register">
