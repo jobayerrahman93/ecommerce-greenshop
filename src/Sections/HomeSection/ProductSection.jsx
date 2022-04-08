@@ -16,7 +16,7 @@ const ProductSection = () => {
 
             <div className="container product-section">
                 <div className="row">
-                    <div className="col-lg-3 col-md-4 d-none d-md-block d-lg-block px-0 ">
+                    <div className="col-lg-3 col-md-4 d-none d-md-block d-lg-block">
                         <div className="category-filter cursor-pointer">
                             <h6 className='category-title p-2'>Category</h6>
                             <div className="product-category-item ms-4">
@@ -136,7 +136,7 @@ const ProductSection = () => {
 
                     </div>
                     <div className="col-lg-9 col-md-8 col-12 ">
-                        <div className="all-products-section container">
+                        <div className="all-products-section">
                             <div className='d-flex allProduct-nav'>
                                 <div>
                                     <NavLink to="/allPlants">
