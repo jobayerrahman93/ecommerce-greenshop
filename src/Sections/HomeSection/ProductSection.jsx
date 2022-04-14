@@ -139,13 +139,26 @@ const ProductSection = () => {
                         <div className="all-products-section">
                             <div className='d-flex allProduct-nav'>
                                 <div>
-                                    <NavLink to="/allPlants">
+                                    <NavLink style={({ isActive }) => {
+                                        return {
+
+                                            color: isActive || location.pathname == '/' ? 'green' : ''
+                                        }
+                                    }} to="/allPlants">
                                         All Plants
                                     </NavLink>
-                                    <NavLink to="/newArrival">
+                                    <NavLink style={({ isActive }) => {
+                                        return {
+                                            color: isActive ? 'green' : ''
+                                        }
+                                    }} to="/newArrival">
                                         New arrival
                                     </NavLink>
-                                    <NavLink to="/sales">
+                                    <NavLink style={({ isActive }) => {
+                                        return {
+                                            color: isActive ? 'green' : ''
+                                        }
+                                    }} to="/sales">
                                         Sales
                                     </NavLink>
                                 </div>

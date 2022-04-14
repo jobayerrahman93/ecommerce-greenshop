@@ -7,7 +7,7 @@ import searchImg from '../../img/search.png';
 const NewArrival = () => {
     return (
         <>
-            <div className="row">
+            <div className="row mt-5">
                 <div className="col-lg-4 col-md-6">
                     <div className="product-box">
                         <div className="product-media">

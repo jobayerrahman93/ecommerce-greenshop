@@ -82,18 +82,18 @@ const Footer = () => {
                                 <div className="d-flex">
                                     <div><img src={locationImg} alt="" /></div>
 
-                                    <div><p className='ms-2'>70 West Buckingham Ave.
-                                        Farmingdale, NY 11735</p></div>
+                                    <div><p className='ms-2'>70 palashbari,
+                                        Gaibandha</p></div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-md-6 col-12 mb-md-0 mb-lg-0 mt-md-3">
+                            <div className="col-lg-3 col-md-6 col-12 mb-md-0 mb-lg-0 ">
                                 <div className="d-flex">
                                     <div><img src={messageImg} alt="" /></div>
 
                                     <div><p className='ms-2'>contact@greenshop.com</p></div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-md-6 mt-md-3 col-12 mb-2 mb-md-0 mb-lg-0">
+                            <div className="col-lg-3 col-md-6  col-12 mb-2 mb-md-0 mb-lg-0">
                                 <div className="d-flex">
                                     <div><img src={callImg} alt="" /></div>
 

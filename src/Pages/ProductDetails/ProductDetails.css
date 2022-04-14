@@ -190,6 +190,14 @@
   color: var(--subtitle-color);
 }
 
+.product-details-section .product-social-icon a i {
+  color: var(--blackish-color);
+}
+
+.product-details-section .product-social-icon a i:hover {
+  color: var(--primary-color);
+}
+
 @media screen and (max-width: 480px) {
   .variant-img-col {
     display: none;

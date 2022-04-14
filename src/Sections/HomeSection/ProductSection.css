@@ -1,4 +1,4 @@
-.category-title {
+.product-section .category-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 16px;
@@ -9,11 +9,11 @@
   margin-top: 40px;
 }
 
-.category-filter {
+.product-section .category-filter {
   background: #fbfbfb;
 }
 
-.product-category-item h6 {
+.product-section .product-category-item h6 {
   font-weight: 400;
   font-size: 15px;
   line-height: 40px;
@@ -22,7 +22,7 @@
   color: var(--blackish-color);
 }
 
-.filter-btn {
+.product-section .filter-btn {
   background-color: var(--primary-color);
   color: #fff;
   width: 40%;
@@ -31,13 +31,13 @@
   line-height: 20px;
 }
 
-.price-range p {
+.product-section .price-range p {
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   margin: 11px 0;
 }
-.price-range span {
+.product-section .price-range span {
   color: var(--primary-color);
   font-weight: 700;
 }
@@ -52,7 +52,7 @@
   margin-right: 37px;
 }
 
-.filter-form-select {
+.product-section .filter-form-select {
   border: none !important;
   font-weight: 400;
   font-size: 15px !important;
@@ -62,19 +62,19 @@
   width: 151px !important;
 }
 
-.short-by {
+.product-section .short-by {
   font-size: 15px;
   line-height: 16px;
   color: var(--blackish-color);
 }
 
-.product-title {
+.product-section .product-title {
   font-size: 16px;
   line-height: 16px;
 
   color: var(--blackish-color);
 }
-.product-price {
+.product-section .product-price {
   font-weight: 700;
   font-size: 18px;
   line-height: 16px;
@@ -82,18 +82,18 @@
   color: var(--primary-color);
 }
 
-.pagination .page-item {
+.product-section .pagination .page-item {
   margin-right: 10px;
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
   border-radius: 4px;
 }
 
-.pagination .page-item:last-child {
+.product-section .pagination .page-item:last-child {
   margin-right: 0px;
 }
 
-.page-item .page-link {
+.product-section .page-item .page-link {
   height: 35px;
   width: 35px;
   font-style: normal;
@@ -103,12 +103,12 @@
   padding: 3px 0.75rem !important;
 }
 
-.plants-container {
+.product-section .plants-container {
   height: 250px;
   background: #fbfbfb;
 }
 
-.findPlants-title {
+.product-section .findPlants-title {
   font-weight: 700;
   font-size: 23px;
   line-height: 22px;
@@ -116,7 +116,7 @@
   color: var(--blackish-color);
 }
 
-.findPlants-subTitle {
+.product-section .findPlants-subTitle {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -124,7 +124,7 @@
   margin: 5px 0 15px 0;
 }
 
-.findBtn {
+.product-section .findBtn {
   background-color: var(--primary-color);
   color: #fff;
   width: 50%;
@@ -135,7 +135,7 @@
   font-weight: 400;
 }
 
-.find-plants-row {
+.product-section .find-plants-row {
   margin-top: 146px;
 }
 

@@ -6,7 +6,7 @@ import searchImg from '../../img/search.png';
 const Sales = () => {
     return (
         <>
-            <div className="row">
+            <div className="row mt-5">
                 <div className="col-lg-4">
                     <div className="product-box">
                         <div className="product-media">
