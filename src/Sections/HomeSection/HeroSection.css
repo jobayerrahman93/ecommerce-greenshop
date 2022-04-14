@@ -39,3 +39,7 @@
   width: 25%;
   height: 44px;
 }
+
+.cmn-btn:hover {
+  color: #fff;
+}

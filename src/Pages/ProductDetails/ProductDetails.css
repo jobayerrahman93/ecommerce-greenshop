@@ -1,229 +1,236 @@
 .productDetails-media {
-    background-color: #fbfbfb;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #fbfbfb;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .productDetails-media img {
-    max-height: 100%;
+  max-height: 100%;
 }
 
 .pdtls-title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 16px;
-    /* identical to box height, or 57% */
-    color: var(--blackish-color);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 16px;
+  /* identical to box height, or 57% */
+  color: var(--blackish-color);
 }
 
 .product-fullDetails h6 {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 16px;
-    margin-top: 10px;
-    color: var(--primary-color);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 16px;
+  margin-top: 10px;
+  color: var(--primary-color);
 }
 
 .total-customer-review i {
-    color: #ffac0c;
+  color: #ffac0c;
 }
 
 .total-customer-review p {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 16px;
-    color: var(--blackish-color);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  color: var(--blackish-color);
 }
 
 .product-cart-area h6 {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 16px;
-    color: var(--blackish-color);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  color: var(--blackish-color);
 }
 
 .short-description p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    margin-top: 10px;
-    margin-bottom: 24px;
-    color: var(--subtitle-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  color: var(--subtitle-color);
 }
 
 .product-cart-area ul {
-    list-style: none;
-    margin-top: 10px;
-    padding-left: 0px;
-    display: flex;
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0px;
+  display: flex;
 }
 
 .product-cart-area li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid var(--subtitle-color);
-    border-radius: 100%;
-    padding: 10px 12px;
-    margin-right: 10px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 16px;
-    color: var(--subtitle-color);
-    width: 40px;
-    height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--subtitle-color);
+  border-radius: 100%;
+  padding: 10px 12px;
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  color: var(--subtitle-color);
+  width: 40px;
+  height: 40px;
 }
 
 .product-cart-area ul li.active {
-    border: 3px solid var(--primary-color);
+  border: 3px solid var(--primary-color);
 }
 
-.plusBtn,
+.product-details-section .plusBtn,
 .minusBtn {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    font-size: 24px;
-    border: 0px;
-    color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  font-size: 24px;
+  border: 0px;
+  color: #fff;
 }
 
 .cartValue {
-    text-align: center;
-    background: transparent;
-    border: none;
-    width: 4rem;
-    font-size: 24px;
-    color: var(--blackish-color);
+  text-align: center;
+  background: transparent;
+  border: none;
+  width: 4rem;
+  font-size: 24px;
+  color: var(--blackish-color);
 }
 
 .buyNowBtn {
-    background-color: var(--primary-color);
-    border-radius: 6px;
-    color: #fff;
-    border: none;
-    padding: 10px 36px;
-    text-transform: capitalize;
-    font-weight: 500;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  padding: 10px 36px;
+  text-transform: capitalize;
+  font-weight: 500;
 }
 
 .addToCartBtn {
-    border: 2px solid var(--primary-color) !important;
-    border-radius: 6px;
-    color: var(--blackish-color);
-    border: none;
-    padding: 10px 20px;
-    text-transform: capitalize;
-    font-weight: 600;
-    background-color: transparent;
+  border: 2px solid var(--primary-color) !important;
+  border-radius: 6px;
+  color: var(--blackish-color);
+  border: none;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  background-color: transparent;
 }
 
 .favoriteBtn {
-    border: 1px solid var(--primary-color) !important;
-    border-radius: 6px;
-    padding: 10px;
-    background-color: transparent;
+  border: 1px solid var(--primary-color) !important;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: transparent;
 }
 
 .favoriteBtn i {
-    color: var(--primary-color);
-    font-size: 19px;
+  color: var(--primary-color);
+  font-size: 19px;
 }
 
 .product-categoriesDetails p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    margin-top: 10px;
-    color: var(--subtitle-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 10px;
+  color: var(--subtitle-color);
 }
 
 .share-section p {
-    margin-top: 10px;
-    font-weight: 700;
+  margin-top: 10px;
+  font-weight: 700;
 }
 
 .product-social-icon a {
-    display: inline-block;
-    width: 40px;
-    text-align: center;
-    margin-left: 16px;
-    background: #fff;
-    color: var(--blackish-color);
-    font-size: 20px;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  margin-left: 16px;
+  background: #fff;
+  color: var(--blackish-color);
+  font-size: 20px;
 }
-
 
 /* nav tabs */
 
 .nav-tabs .nav-link.active {
-    color: var(--primary-color);
-    background-color: #fff;
-    border-bottom: 3px solid var(--primary-color);
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 16px;
+  color: var(--primary-color);
+  background-color: #fff;
+  border-bottom: 3px solid var(--primary-color);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
 }
 
 .nav-tabs .nav-link {
-    padding-left: 0px;
-    padding-right: 0px;
-    font-weight: 400;
-    margin-right: 20px;
-    font-size: 17px;
-    line-height: 16px;
-    /* identical to box height, or 94% */
-    color: var(--blackish-color);
+  padding-left: 0px;
+  padding-right: 0px;
+  font-weight: 400;
+  margin-right: 20px;
+  font-size: 17px;
+  line-height: 16px;
+  /* identical to box height, or 94% */
+  color: var(--blackish-color);
+  border-top: 0;
+  border-left: 0px;
+  border-right: 0px;
 }
 
+/* .product-details-section .nav-tabs .nav-link:focus,
+.product-details-section .nav-tabs .nav-link:hover {
+  border-color: gray;
+} */
+
 .product-details-tab p {
-    color: var(--subtitle-color);
+  color: var(--subtitle-color);
 }
 
 @media screen and (max-width: 480px) {
-    .variant-img-col {
-        display: none;
-    }
-    .product-fullDetails h6 {
-        font-size: 15px;
-        margin-top: 0px;
-    }
-    .total-customer-review i {
-        font-size: 13px;
-    }
-    .total-customer-review p {
-        font-size: 13px;
-    }
-    .product-cart-area li {
-        font-size: 13px;
-        width: 30px;
-        height: 30px;
-    }
-    .buyNowBtn {
-        padding: 0px 6px;
-        font-size: 13px;
-    }
-    .addToCartBtn {
-        font-size: 13px;
-        padding: 4px 6px;
-    }
-    .favoriteBtn {
-        padding: 6px;
-    }
-    .product-social-icon a {
-        width: 37px;
-        margin-left: 0px;
-    }
-    .plusBtn,
-    .minusBtn {
-        height: 30px;
-        width: 30px;
-        font-size: 20px;
-    }
-    .cartValue {
-        font-size: 20px;
-    }
+  .variant-img-col {
+    display: none;
+  }
+  .product-fullDetails h6 {
+    font-size: 15px;
+    margin-top: 0px;
+  }
+  .total-customer-review i {
+    font-size: 13px;
+  }
+  .total-customer-review p {
+    font-size: 13px;
+  }
+  .product-cart-area li {
+    font-size: 13px;
+    width: 30px;
+    height: 30px;
+  }
+  .buyNowBtn {
+    padding: 0px 6px;
+    font-size: 13px;
+  }
+  .addToCartBtn {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+  .favoriteBtn {
+    padding: 6px;
+  }
+  .product-social-icon a {
+    width: 37px;
+    margin-left: 0px;
+  }
+  .plusBtn,
+  .minusBtn {
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+  }
+  .cartValue {
+    font-size: 20px;
+  }
 }

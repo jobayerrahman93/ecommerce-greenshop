@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import imgVariant1 from '../../img/product-details-img.png';
+import RelatedProducts from '../../Sections/RelatedProducts';
 import './ProductDetails.css';
 
 const ProductDetails = () => {
@@ -30,7 +31,7 @@ const ProductDetails = () => {
 
         <>
             <div className="container">
-                {/* bar cucumber */}
+                {/* breadcrumbs */}
 
                 <div className="breadcrumbs my-5">
                     <p>Home/Product Details</p>
@@ -125,12 +126,19 @@ const ProductDetails = () => {
 
                                         <div className="col-lg-9 col-12">
                                             <div className='d-flex mt-4 mt-md-4 mt-lg-0'>
-                                                <button className="buyNowBtn">Buy Now</button>
+
+                                                <Link to="/product-cart">
+                                                    <button className="buyNowBtn">Buy Now</button>
+                                                </Link>
                                                 <button className="addToCartBtn ms-3">add to cart</button>
 
                                                 <button type='button' className='favoriteBtn ms-3'>
                                                     <i class="fa-solid fa-heart"></i>
+
+
                                                 </button>
+
+
 
                                             </div>
                                         </div>
@@ -155,6 +163,8 @@ const ProductDetails = () => {
                                                     <a href="#"><i class="fab fa-twitter"></i></a>
 
                                                     <a href="#"><i class="fab fa-instagram"></i></a>
+
+
                                                 </div>
 
 
@@ -212,6 +222,8 @@ const ProductDetails = () => {
 
 
                 </div>
+
+                <RelatedProducts></RelatedProducts>
 
 
             </div>

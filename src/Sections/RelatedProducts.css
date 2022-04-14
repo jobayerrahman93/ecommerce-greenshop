@@ -1,0 +1,23 @@
+.related-product-section .title {
+  color: var(--blackish-color);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.related-product-section .price {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.related-product-section .section-title {
+  font-weight: 700;
+  font-size: 17px;
+
+  color: var(--primary-color);
+}
+
+.related-product-section hr {
+  margin: 8px 0 44px 0;
+  color: gray;
+}
