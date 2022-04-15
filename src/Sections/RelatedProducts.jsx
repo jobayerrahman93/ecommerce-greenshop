@@ -15,7 +15,7 @@ const RelatedProducts = () => {
                 <hr />
 
                 <div className="row">
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-md-6">
 
                         <div className="related-product">
                             <div className="product-media">
@@ -45,7 +45,7 @@ const RelatedProducts = () => {
                         </div>
 
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-md-6">
 
                         <div className="related-product">
                             <div className="product-media">
@@ -75,7 +75,7 @@ const RelatedProducts = () => {
                         </div>
 
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-md-6">
 
                         <div className="related-product">
                             <div className="product-media">
@@ -105,7 +105,7 @@ const RelatedProducts = () => {
                         </div>
 
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-md-6">
 
                         <div className="related-product">
                             <div className="product-media">

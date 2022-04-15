@@ -15,7 +15,7 @@ const ProductCart = () => {
 
                     <div className="row">
                         <div className="col-lg-8">
-                            <table class="table table-responsive table-borderless">
+                            <table class="table table-responsive table-borderless align-middle">
                                 <thead>
                                     <tr >
                                         <th scope="col">Products</th>
@@ -27,8 +27,8 @@ const ProductCart = () => {
                                 <tbody>
                                     <tr class="spacer highlighted">
 
-                                        <td>Mark</td>
-                                        <td>Mark</td>
+                                        <td>Barberton Daisy</td>
+                                        <td>238.00</td>
                                         <td>
                                             <div className='d-flex'>
                                                 <button className='minusBtn'>-</button>
@@ -40,8 +40,8 @@ const ProductCart = () => {
                                     </tr>
                                     <tr>
 
-                                        <td>Jacob</td>
-                                        <td>Jacob</td>
+                                        <td>Blushing Bromeliad</td>
+                                        <td>238.00</td>
                                         <td>
                                             <div className='d-flex'>
                                                 <button className='minusBtn'>-</button>
@@ -54,7 +54,7 @@ const ProductCart = () => {
                                     <tr>
 
                                         <td>Larry the Bird</td>
-                                        <td>@twitter</td>
+                                        <td>238.00</td>
                                         <td>
                                             <div className='d-flex'>
                                                 <button className='minusBtn'>-</button>

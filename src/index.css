@@ -38,3 +38,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.pagination .page-link:focus {
+  box-shadow: none !important;
+}
+
+.navbar-brand:focus-visible {
+  outline: 0 !important;
+}

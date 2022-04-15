@@ -176,3 +176,15 @@
   padding: 10px 0;
   color: #ffffff;
 }
+
+@media screen and (max-width: 991px) {
+  .orders-checkout img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .orders-checkout img {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+.confirmation-box {
+  min-height: 50vh;
+}
+.confirmation-box a {
+  text-decoration: none;
+}
+
+.confirmation-box h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+  .confirmation-box h1 {
+    font-size: 19px;
+  }
+}

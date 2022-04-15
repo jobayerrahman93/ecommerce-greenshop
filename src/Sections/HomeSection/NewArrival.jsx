@@ -5,6 +5,15 @@ import p2 from '../../img/p2.png';
 import searchImg from '../../img/search.png';
 
 const NewArrival = () => {
+
+    // const [products, setProducts] = useState([]);
+
+    // useEffect(() => {
+    //     fetch('products.json')
+    //         .then(res => res.json())
+    //         .then(data => setProducts(data));
+    // }, []);
+
     return (
         <>
             <div className="row mt-5">

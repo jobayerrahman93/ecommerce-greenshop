@@ -73,7 +73,7 @@ const Navbar = () => {
       </nav> */}
 
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-lg-top">
+      <nav class="navbar header-section navbar-expand-lg navbar-light bg-white sticky-lg-top">
         <div class="container">
           <NavLink className="navbar-brand" to="/">
             <img

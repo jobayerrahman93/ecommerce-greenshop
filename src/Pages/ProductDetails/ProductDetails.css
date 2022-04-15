@@ -218,7 +218,7 @@
     height: 30px;
   }
   .buyNowBtn {
-    padding: 0px 6px;
+    /* padding: 0px 6px; */
     font-size: 13px;
   }
   .addToCartBtn {
@@ -234,11 +234,18 @@
   }
   .plusBtn,
   .minusBtn {
-    height: 30px;
-    width: 30px;
-    font-size: 20px;
+    height: 30px !important;
+    width: 30px !important;
+    font-size: 20px !important;
   }
   .cartValue {
     font-size: 20px;
+  }
+  .product-details-section .nav-tabs {
+    padding: 0 10px;
+  }
+
+  .product-details-section .product-details-tab {
+    padding: 0 10px !important;
   }
 }

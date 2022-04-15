@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import p5 from '../../img/p5.png';
 import paymentImg from '../../img/paymentImg.png';
 import './Checkout.css';
@@ -127,7 +128,7 @@ const Checkout = () => {
                                             <div className="col-lg-2">
                                                 <img src={p5} className="img-fluid" alt="" />
                                             </div>
-                                            <div className="col-lg-7">
+                                            <div className="col-lg-7 col-9">
                                                 <div className="single-product-checkout d-flex">
                                                     <div>
                                                         <h6 className='product-name'>Blushing Bromeliad</h6>
@@ -140,7 +141,7 @@ const Checkout = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-3">
+                                            <div className="col-lg-3 col-3">
                                                 <h5 className='total-singleProduct-price'>$ <span>239</span></h5>
                                             </div>
                                         </div>
@@ -152,7 +153,7 @@ const Checkout = () => {
                                             <div className="col-lg-2">
                                                 <img src={p5} className="img-fluid" alt="" />
                                             </div>
-                                            <div className="col-lg-7">
+                                            <div className="col-lg-7 col-9">
                                                 <div className="single-product-checkout d-flex">
                                                     <div>
                                                         <h6 className='product-name'>Blushing Bromeliad</h6>
@@ -165,7 +166,7 @@ const Checkout = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-3">
+                                            <div className="col-lg-3 col-3">
                                                 <h5 className='total-singleProduct-price'>$ <span>239</span></h5>
                                             </div>
                                         </div>
@@ -176,7 +177,7 @@ const Checkout = () => {
                                             <div className="col-lg-2">
                                                 <img src={p5} className="img-fluid" alt="" />
                                             </div>
-                                            <div className="col-lg-7">
+                                            <div className="col-lg-7 col-9">
                                                 <div className="single-product-checkout d-flex">
                                                     <div>
                                                         <h6 className='product-name'>Blushing Bromeliad</h6>
@@ -189,7 +190,7 @@ const Checkout = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-3">
+                                            <div className="col-lg-3 col-3">
                                                 <h5 className='total-singleProduct-price'>$ <span>239</span></h5>
                                             </div>
                                         </div>
@@ -249,10 +250,12 @@ const Checkout = () => {
                                             </label>
                                         </div>
 
+                                        <Link to="/confirmation">
+                                            <button type='button' className="btn place-orderBtn w-100  ">
+                                                Place order
+                                            </button>
+                                        </Link>
 
-                                        <button type='button' className="btn place-orderBtn w-100  ">
-                                            Place order
-                                        </button>
                                     </div>
 
 

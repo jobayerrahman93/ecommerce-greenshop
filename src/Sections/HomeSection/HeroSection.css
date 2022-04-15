@@ -36,10 +36,38 @@
   border-radius: 6px;
   color: #fff;
   border: none;
-  width: 25%;
-  height: 44px;
+  padding: 10px 30px;
 }
 
 .cmn-btn:hover {
   color: #fff;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
+
+.slick-dots .slick-active button::before {
+  color: var(--primary-color) !important;
+  opacity: 1 !important;
+}
+.slick-dots li {
+  margin: 0 !important;
+}
+
+.hero-section .slick-list {
+  margin: 0 -2px !important;
+}
+.hero-section .slick-initialized .slick-slide {
+  margin: 0 2px !important;
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .hero-welcome {
+    font-size: 11px;
+  }
 }

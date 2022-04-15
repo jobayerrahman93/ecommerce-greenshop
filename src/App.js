@@ -3,6 +3,7 @@ import "./App.css";
 import Footer from "./Layout/Footer";
 import Navbar from "./Layout/Navbar";
 import Checkout from "./Pages/Checkout/Checkout";
+import Confirmation from "./Pages/Confirmation/Confirmation";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
@@ -38,6 +39,7 @@ function App() {
 
           <Route path="/product-cart" element={<ProductCart/>}></Route>
           <Route path="/checkout" element={<Checkout/>}></Route>
+          <Route path="/confirmation" element={<Confirmation/>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

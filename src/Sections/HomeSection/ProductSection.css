@@ -140,14 +140,10 @@
 }
 
 @media screen and (max-width: 480px) {
-  .hero-title {
-    font-size: 24px;
-    line-height: 29px;
-  }
-
   .cmn-btn {
-    width: 32%;
+    width: auto;
     height: 20%;
+    padding: 8px 22px;
   }
 
   .hero-title {

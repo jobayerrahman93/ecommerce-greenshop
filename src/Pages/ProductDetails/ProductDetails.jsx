@@ -21,11 +21,35 @@ const ProductDetails = () => {
             });
     }, []);
 
-    console.log(pDetails);
+    // console.log(pDetails);
 
 
     const { productName, productDes, productPrice, productImg } = pDetails;
-    console.log(productName);
+    // console.log(productName);
+
+
+
+    const [totalCart, setTotalCart] = useState(1);
+    console.log(totalCart);
+
+    const totalCartNumberPlus = () => {
+
+        setTotalCart(totalCart + 1);
+
+    }
+
+    const totalCartNumberMinus = () => {
+
+        if (totalCart == 0) {
+            return 0
+        }
+        else {
+            setTotalCart(totalCart - 1);
+        }
+    }
+
+
+
 
     return (
 
@@ -118,9 +142,11 @@ const ProductDetails = () => {
 
                                         <div className="col-lg-3 col-12">
                                             <div className='d-flex'>
-                                                <button className='minusBtn'>-</button>
-                                                <input defaultValue="0" min='0' className='cartValue' type="text" />
-                                                <button className='plusBtn'>+</button>
+                                                <button onClick={totalCartNumberMinus} className='minusBtn'>-</button>
+                                                <input defaultValue="0" min='0' value={totalCart} className='cartValue' type="text" />
+                                                <button onClick={
+                                                    totalCartNumberPlus
+                                                } className='plusBtn'>+</button>
                                             </div>
                                         </div>
 
