@@ -17,7 +17,7 @@ const HeroSection = () => {
     };
     return (
         <>
-            <div className="container bg-light">
+            <div className="container bg-light hero-section">
 
                 <Slider {...settings}>
                     <div>
