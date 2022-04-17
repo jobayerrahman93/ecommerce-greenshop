@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RelatedProducts from '../../Sections/RelatedProducts';
 import './ProductCart.css';
 const ProductCart = () => {
+
+
+    const [totalCart, setTotalCart] = useState(1);
+
+
+    const cartPlus = () => {
+        setTotalCart(totalCart + 1);
+    }
+
+    const cartMinus = () => {
+
+        if (totalCart > 1) {
+            setTotalCart(totalCart - 1);
+        }
+        else {
+            return
+        }
+
+    }
+
+    console.log(totalCart);
+
     return (
         <>
             <section className='products-cart-section'>
@@ -31,39 +53,27 @@ const ProductCart = () => {
                                         <td>238.00</td>
                                         <td>
                                             <div className='d-flex'>
-                                                <button className='minusBtn'>-</button>
-                                                <input defaultValue="0" min='0' className='cartValue' type="text" />
-                                                <button className='plusBtn'>+</button>
+                                                <button onClick={cartMinus} className='minusBtn'>-</button>
+                                                <input defaultValue="0" value={totalCart} className='cartValue' type="text" />
+                                                <button onClick={cartPlus} className='plusBtn'>+</button>
                                             </div>
                                         </td>
                                         <td className='table-price'>$ <span>238.00</span></td>
                                     </tr>
-                                    <tr>
+                                    {/* <tr>
 
                                         <td>Blushing Bromeliad</td>
                                         <td>238.00</td>
                                         <td>
                                             <div className='d-flex'>
-                                                <button className='minusBtn'>-</button>
-                                                <input defaultValue="0" min='0' className='cartValue' type="text" />
-                                                <button className='plusBtn'>+</button>
+                                                <button onClick={cartMinus} className='minusBtn'>-</button>
+                                                <input defaultValue="0" value={totalCart} className='cartValue' type="text" />
+                                                <button onClick={cartPlus} className='plusBtn'>+</button>
                                             </div>
                                         </td>
                                         <td className='table-price'>$ <span>238.00</span></td>
-                                    </tr>
-                                    <tr>
+                                    </tr> */}
 
-                                        <td>Larry the Bird</td>
-                                        <td>238.00</td>
-                                        <td>
-                                            <div className='d-flex'>
-                                                <button className='minusBtn'>-</button>
-                                                <input defaultValue="0" min='0' className='cartValue' type="text" />
-                                                <button className='plusBtn'>+</button>
-                                            </div>
-                                        </td>
-                                        <td className='table-price'>$ <span>238.00</span></td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>

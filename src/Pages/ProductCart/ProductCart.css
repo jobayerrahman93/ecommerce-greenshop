@@ -102,3 +102,9 @@
 .products-cart-section .table tr td {
   background-color: #fbfbfb;
 }
+
+.form-control:focus {
+  border-color: var(--primary-color) !important;
+
+  box-shadow: none;
+}

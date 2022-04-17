@@ -3,35 +3,37 @@
     "id": 0,
     "productName": "Barberton Daisy",
     "productPrice": "119.00",
-    "productImg": "/p1.png",
+    "productImg": "https://i.ibb.co/cgR7qKQ/p1.png",
     "productDes": "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
   },
   {
     "id": 1,
+    "category": "sales",
     "productName": "Angel Wing Begonia",
     "productPrice": "119.00",
-    "productImg": "/p2.png",
+    "productImg": "https://i.ibb.co/2hkbR1h/p2.png",
     "productDes": "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
   },
   {
     "id": 2,
+    "category": "newArrivals",
     "productName": "African Violet",
     "productPrice": "119.00",
-    "productImg": "/p3.png",
+    "productImg": "https://i.ibb.co/jHBgDJ5/p3.png",
     "productDes": "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
   },
   {
     "id": 3,
     "productName": "Beach Spider Lily",
     "productPrice": "119.00",
-    "productImg": "/p5.png",
+    "productImg": "https://i.ibb.co/NSFNg1p/p5.png",
     "productDes": "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
   },
   {
     "id": 4,
     "productName": "Blushing Bromeliad",
     "productPrice": "119.00",
-    "productImg": "/p1.png",
+    "productImg": "https://i.ibb.co/kBDGVbL/p4.png",
     "productDes": "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
   }
 ]

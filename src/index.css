@@ -30,6 +30,10 @@ p {
 .main-color {
   color: var(--primary-color) !important;
 }
+
+.btn:hover {
+  color: #fff !important;
+}
 body {
   font-family: "Poppins", sans-serif;
 }

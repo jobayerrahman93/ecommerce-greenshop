@@ -1,50 +1,74 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import cartImg from '../../img/cart.png';
 import favoriteImg from '../../img/favorite.png';
-import p2 from '../../img/p2.png';
 import searchImg from '../../img/search.png';
 
 const NewArrival = () => {
 
-    // const [products, setProducts] = useState([]);
+    const [arrivalProduct, setArrivalProduct] = useState([]);
 
-    // useEffect(() => {
-    //     fetch('products.json')
-    //         .then(res => res.json())
-    //         .then(data => setProducts(data));
-    // }, []);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/')
+            .then(res => res.json())
+            .then(data => {
+                const Singleproduct = data.filter(categorys => categorys.category == "newArrivals");
+
+
+
+                setArrivalProduct(Singleproduct);
+            });
+    }, []);
+
+
+
+
 
     return (
         <>
             <div className="row mt-5">
-                <div className="col-lg-4 col-md-6">
-                    <div className="product-box">
-                        <div className="product-media">
-                            <img src={p2} className="" height="250" alt="" />
 
-                            {/* cart hover section */}
 
-                            <div className="cart-hover-menu">
-                                <div className="d-flex cart-hover-content">
-                                    <div>
-                                        <img src={searchImg} alt="" />
+
+                {
+                    arrivalProduct.map((singleArrival) =>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="product-box">
+                                <Link to={`/productDetails/${singleArrival.id}`}>
+
+
+                                    <div className="product-media">
+                                        <img src={singleArrival.productImg} className="" height="250" alt="" />
+
+                                        {/* cart hover section */}
+
+                                        <div className="cart-hover-menu">
+                                            <div className="d-flex cart-hover-content">
+                                                <div>
+                                                    <img src={searchImg} alt="" />
+                                                </div>
+                                                <div>
+                                                    <img src={favoriteImg} alt="" />
+                                                </div>
+                                                <div>
+                                                    <img src={cartImg} alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <div>
-                                        <img src={favoriteImg} alt="" />
+                                        <h6 className='product-title'>{singleArrival.productName}</h6>
+                                        <h6 className='product-price'>$ {singleArrival.productPrice}</h6>
                                     </div>
-                                    <div>
-                                        <img src={cartImg} alt="" />
-                                    </div>
-                                </div>
+                                </Link>
+
                             </div>
+                        </div>
+                    )
+                }
 
-                        </div>
-                        <div>
-                            <h6 className='product-title'>Beach Spider Lily</h6>
-                            <h6 className='product-price'>$160</h6>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </>

@@ -58,9 +58,9 @@
 .hero-section .slick-list {
   margin: 0 -2px !important;
 }
-.hero-section .slick-initialized .slick-slide {
+/* .hero-section .slick-initialized .slick-slide {
   margin: 0 2px !important;
-}
+} */
 
 @media screen and (max-width: 480px) {
   .hero-title {
