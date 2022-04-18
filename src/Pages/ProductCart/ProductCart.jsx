@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import RelatedProducts from '../../Sections/RelatedProducts';
 import './ProductCart.css';
-const ProductCart = () => {
+const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
 
 
-    const [totalCart, setTotalCart] = useState(1);
+    const [totalCart, setTotalCart] = useState(pastCartTotal);
+    const [totalCartPrice, setTotalCartPrice] = useState(cartfromDetails.productPrice);
+    console.log(cartfromDetails);
 
 
     const cartPlus = () => {
+
         setTotalCart(totalCart + 1);
+
     }
 
     const cartMinus = () => {
@@ -24,6 +28,27 @@ const ProductCart = () => {
     }
 
     console.log(totalCart);
+
+
+    // const location = useLocation();
+    // const { pDetails } = location.state;
+
+    // console.log(pDetails)
+
+    useEffect(() => {
+        // console.log(totalCart);
+        // console.log(totalCartPrice);
+        let totalProductPrice = cartfromDetails.productPrice * totalCart;
+        // console.log(totalProductPrice);
+        setTotalCartPrice(totalProductPrice);
+        // console.log(totalProductPrice);
+    }, [totalCart])
+
+
+    let shippingCharge = 16;
+
+    let totalBalance = totalCartPrice + shippingCharge;
+
 
     return (
         <>
@@ -49,8 +74,8 @@ const ProductCart = () => {
                                 <tbody>
                                     <tr class="spacer highlighted">
 
-                                        <td>Barberton Daisy</td>
-                                        <td>238.00</td>
+                                        <td>{cartfromDetails.productName}</td>
+                                        <td>{cartfromDetails.productPrice}</td>
                                         <td>
                                             <div className='d-flex'>
                                                 <button onClick={cartMinus} className='minusBtn'>-</button>
@@ -58,7 +83,7 @@ const ProductCart = () => {
                                                 <button onClick={cartPlus} className='plusBtn'>+</button>
                                             </div>
                                         </td>
-                                        <td className='table-price'>$ <span>238.00</span></td>
+                                        <td className='table-price'>$ <span>{totalCartPrice}</span></td>
                                     </tr>
                                     {/* <tr>
 
@@ -94,7 +119,7 @@ const ProductCart = () => {
                                 <div className="subtotal-section">
                                     <div className='d-flex justify-content-between'>
                                         <p>Subtotal:</p>
-                                        <h6>$ <span>2,683.00</span></h6>
+                                        <h6>$ <span>{totalCartPrice}</span></h6>
                                     </div>
                                     <div className='d-flex justify-content-between'>
                                         <p>Coupon Discount:</p>
@@ -112,11 +137,11 @@ const ProductCart = () => {
 
                                     <div className='d-flex justify-content-between'>
                                         <p className='total-cart-price'>Total:</p>
-                                        <h6 className='main-color'>$ <span>1690.00</span></h6>
+                                        <h6 className='main-color'>$ <span>{totalBalance}</span></h6>
                                     </div>
 
                                     <Link to="/checkout">
-                                        <button type='button' className='btn cmn-btn w-100'>Proceed To Checkout</button>
+                                        <button onClick={() => checkoutDetails(cartfromDetails, totalBalance, totalCart)} type='button' className='btn cmn-btn w-100'>Proceed To Checkout</button>
                                     </Link>
 
                                     <p className='main-color mt-4 text-center'>Continue Shopping</p>

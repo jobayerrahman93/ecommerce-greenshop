@@ -4,7 +4,7 @@ import imgVariant1 from '../../img/product-details-img.png';
 import RelatedProducts from '../../Sections/RelatedProducts';
 import './ProductDetails.css';
 
-const ProductDetails = () => {
+const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
 
     const [pDetails, setPDetails] = useState({});
 
@@ -154,7 +154,8 @@ const ProductDetails = () => {
                                             <div className='d-flex mt-4 mt-md-4 mt-lg-0'>
 
                                                 <Link to="/product-cart">
-                                                    <button className="buyNowBtn">Buy Now</button>
+                                                    <button onClick={() => cartDetails(totalCart, pDetails)
+                                                    } className="buyNowBtn">Buy Now</button>
                                                 </Link>
                                                 <button className="addToCartBtn ms-3">add to cart</button>
 

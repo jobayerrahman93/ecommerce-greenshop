@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import p5 from '../../img/p5.png';
 import paymentImg from '../../img/paymentImg.png';
 import './Checkout.css';
-const Checkout = () => {
+const Checkout = ({ cartTotalBalance, checkoutCartDtl, totalCart }) => {
     return (
         <>
             <div className="checkout-section">
@@ -95,7 +94,7 @@ const Checkout = () => {
                                     </div>
 
                                     <div class="form-check ms-2 d-flex align-items-center">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                                        <input class="form-check-input" type="radio" name="" id="flexRadioDefault1" />
                                         <label class="form-check-label different-address " for="flexRadioDefault1">
                                             Ship to different address ?
                                         </label>
@@ -126,75 +125,28 @@ const Checkout = () => {
                                     <div className="orders-checkout mb-2">
                                         <div className="row">
                                             <div className="col-lg-2">
-                                                <img src={p5} className="img-fluid" alt="" />
+                                                <img src={checkoutCartDtl.productImg} className="img-fluid" alt="" />
                                             </div>
                                             <div className="col-lg-7 col-9">
                                                 <div className="single-product-checkout d-flex">
                                                     <div>
-                                                        <h6 className='product-name'>Blushing Bromeliad</h6>
+                                                        <h6 className='product-name'>{checkoutCartDtl.productName}</h6>
                                                         <p className='product-sku'>SKU: 19957518757065</p>
                                                     </div>
 
                                                     <div className='total-single-products-checkout'>
-                                                        <span>(x6)</span>
+                                                        <span>(x{totalCart})</span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div className="col-lg-3 col-3">
-                                                <h5 className='total-singleProduct-price'>$ <span>239</span></h5>
+                                                <h5 className='total-singleProduct-price'>$ <span>{checkoutCartDtl.productPrice}</span></h5>
                                             </div>
                                         </div>
                                     </div>
 
 
-                                    <div className="orders-checkout mb-2">
-                                        <div className="row">
-                                            <div className="col-lg-2">
-                                                <img src={p5} className="img-fluid" alt="" />
-                                            </div>
-                                            <div className="col-lg-7 col-9">
-                                                <div className="single-product-checkout d-flex">
-                                                    <div>
-                                                        <h6 className='product-name'>Blushing Bromeliad</h6>
-                                                        <p className='product-sku'>SKU: 19957518757065</p>
-                                                    </div>
-
-                                                    <div className='total-single-products-checkout'>
-                                                        <span>(x6)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-3 col-3">
-                                                <h5 className='total-singleProduct-price'>$ <span>239</span></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="orders-checkout mb-2">
-                                        <div className="row">
-                                            <div className="col-lg-2">
-                                                <img src={p5} className="img-fluid" alt="" />
-                                            </div>
-                                            <div className="col-lg-7 col-9">
-                                                <div className="single-product-checkout d-flex">
-                                                    <div>
-                                                        <h6 className='product-name'>Blushing Bromeliad</h6>
-                                                        <p className='product-sku'>SKU: 19957518757065</p>
-                                                    </div>
-
-                                                    <div className='total-single-products-checkout'>
-                                                        <span>(x6)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-3 col-3">
-                                                <h5 className='total-singleProduct-price'>$ <span>239</span></h5>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                 </div>
 
@@ -202,7 +154,7 @@ const Checkout = () => {
                                 <div className="subtotal-section">
                                     <div className='d-flex justify-content-between'>
                                         <p>Subtotal:</p>
-                                        <h6>$ <span>2,683.00</span></h6>
+                                        <h6>$ <span>{cartTotalBalance}</span></h6>
                                     </div>
                                     <div className='d-flex justify-content-between'>
                                         <p>Coupon Discount:</p>
@@ -210,7 +162,7 @@ const Checkout = () => {
                                     </div>
                                     <div className='d-flex justify-content-between'>
                                         <p>Shiping:</p>
-                                        <h6>$ <span>16</span></h6>
+                                        <h6>$ <span>00</span></h6>
                                     </div>
 
                                     <div>
@@ -221,7 +173,7 @@ const Checkout = () => {
 
                                     <div className='d-flex justify-content-between'>
                                         <p className='total-cart-price'>Total:</p>
-                                        <h6 className='main-color'>$ <span>1690.00</span></h6>
+                                        <h6 className='main-color'>$ <span>{cartTotalBalance}</span></h6>
                                     </div>
 
 
@@ -230,22 +182,22 @@ const Checkout = () => {
                                         <h2 className='payment-method-title'>Payment Method</h2>
 
                                         <div class="form-check mb-4 payment-form">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                                            <label class="form-check-label different-address " for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                                            <label class="form-check-label different-address " for="flexRadioDefault2">
                                                 <img src={paymentImg} alt="" />
                                             </label>
                                         </div>
 
                                         <div class="form-check mb-4 payment-form">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                                            <label class="form-check-label different-address " for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
+                                            <label class="form-check-label different-address " for="flexRadioDefault3">
                                                 Direct Bank Transfer
                                             </label>
                                         </div>
 
                                         <div class="form-check mb-5 payment-form">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                                            <label class="form-check-label different-address " for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" />
+                                            <label class="form-check-label different-address " for="flexRadioDefault4">
                                                 Cash on delivery
                                             </label>
                                         </div>

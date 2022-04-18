@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./Layout/Footer";
@@ -16,7 +17,38 @@ import Sales from "./Sections/HomeSection/Sales";
 
 
 function App() {
+
+  const [cartfromDetails,setCartfromDetails]=useState({});
+  const [pastCartTotal,setPastCartTotal]=useState(0);
+  console.log(cartfromDetails);
+
+  
+  const cartDetails=(cart,pdtl)=>{
+    // console.log("cart number",cart,pdtl);
+
+    setCartfromDetails(pdtl);
+    setPastCartTotal(cart);
+  
+  }
+
+
+  const [checkoutCartDtl,setCheckOutCartDtl]=useState({});
+  const [cartTotalBalance,setcartTotalBalance]=useState(0);
+  const [totalCart,setTotalCart]=useState(0);
+
+  const checkoutDetails=(cartDetails,totalBalance,totalCart)=>{
+    console.log(cartDetails, totalBalance,totalCart, "come in");
+
+    setCheckOutCartDtl(cartDetails);
+    setcartTotalBalance(totalBalance);
+    setTotalCart(totalCart);
+
+    
+  }
+  
   return (
+
+
     <>
       <BrowserRouter>
         <Navbar></Navbar>
@@ -29,7 +61,7 @@ function App() {
 
           <Route
             path="/productDetails/:id"
-            element={<ProductDetails />}
+            element={<ProductDetails cartDetails={cartDetails} />}
           ></Route>
 
           <Route path="/login" element={<Login />}>
@@ -37,8 +69,8 @@ function App() {
             <Route path="UserLogin" element={<UserLogin />}></Route>
           </Route>
 
-          <Route path="/product-cart" element={<ProductCart/>}></Route>
-          <Route path="/checkout" element={<Checkout/>}></Route>
+          <Route path="/product-cart" element={<ProductCart cartfromDetails={cartfromDetails} pastCartTotal={pastCartTotal} checkoutDetails={checkoutDetails} />}></Route>
+          <Route path="/checkout" element={<Checkout checkoutCartDtl={checkoutCartDtl} cartTotalBalance={cartTotalBalance} totalCart={totalCart} />}></Route>
           <Route path="/confirmation" element={<Confirmation/>}></Route>
         </Routes>
         <Footer></Footer>
