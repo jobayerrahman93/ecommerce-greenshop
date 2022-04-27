@@ -1,6 +1,12 @@
 footer {
   margin-top: 113px;
 }
+.company-title {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-left: 5px;
+}
 .newsletter-section {
   background: #fbfbfb;
   padding: 24px 10px;

@@ -5,7 +5,7 @@ import facebookImg from "../img/Facebook.png";
 import instagramImg from "../img/Instagram.png";
 import linkedinImg from "../img/Linkedin.png";
 import locationImg from "../img/Location.png";
-import fullLogo from "../img/Logo-full.png";
+import logo from '../img/logo.png';
 import messageImg from "../img/Message.png";
 import newsltr1 from "../img/newsltr1.png";
 import newsltr2 from "../img/newsltr2.png";
@@ -75,8 +75,9 @@ const Footer = () => {
 
                     <div className="contact-section">
                         <div className="row">
-                            <div className="col-lg-3 col-md-6 col-12 mb-2 mb-md-0 mb-lg-0">
-                                <img src={fullLogo} alt="" />
+                            <div className="col-lg-3 col-md-6 col-12 mb-2 mb-md-0 mb-lg-0 d-flex align-items-center">
+                                <img src={logo} alt="" />
+                                <span className='company-title'>Eco Shop</span>
                             </div>
                             <div className="col-lg-3 col-md-6 col-12 mb-2 mb-md-0 mb-lg-0">
                                 <div className="d-flex">
@@ -86,7 +87,7 @@ const Footer = () => {
                                         Gaibandha</p></div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-md-6 col-12 mb-md-0 mb-lg-0 ">
+                            <div className="col-lg-3 col-md-6 col-12 mb-2 mb-md-0 mb-lg-0 ">
                                 <div className="d-flex">
                                     <div><img src={messageImg} alt="" /></div>
 

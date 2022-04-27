@@ -12,6 +12,7 @@ import UserLogin from "./Pages/Login/UserLogin";
 import ProductCart from './Pages/ProductCart/ProductCart.jsx';
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import AllPlants from "./Sections/HomeSection/AllPlants";
+import Blogs from "./Sections/HomeSection/Blogs";
 import NewArrival from "./Sections/HomeSection/NewArrival";
 import Sales from "./Sections/HomeSection/Sales";
 
@@ -20,7 +21,7 @@ function App() {
 
   const [cartfromDetails,setCartfromDetails]=useState({});
   const [pastCartTotal,setPastCartTotal]=useState(0);
-  console.log(cartfromDetails);
+  // console.log(cartfromDetails);
 
   
   const cartDetails=(cart,pdtl)=>{
@@ -51,13 +52,15 @@ function App() {
 
     <>
       <BrowserRouter>
-        <Navbar></Navbar>
+        <Navbar ></Navbar>
         <Routes>
           <Route path="/" element={<Home />}>
             <Route path="allPlants" element={<AllPlants />}></Route>
             <Route path="newArrival" element={<NewArrival />}></Route>
             <Route path="sales" element={<Sales />}></Route>
           </Route>
+
+          <Route path="/blogs" element={<Blogs />}></Route>
 
           <Route
             path="/productDetails/:id"
