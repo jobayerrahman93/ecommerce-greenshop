@@ -27,41 +27,45 @@ const Sales = () => {
             <div className="row mt-5">
 
                 {
-                    salesProduct.map(singleSales =>
-                        <div className="col-lg-4">
+                    salesProduct == '' ? <div class="spinner-border text-success text-center mx-auto my-5" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                        :
+                        salesProduct.map(singleSales =>
+                            <div className="col-lg-4">
 
-                            <div className="product-box">
-                                <Link to={`/productDetails/${singleSales.id}`}>
-                                    <div className="product-media">
-                                        <img src={singleSales.productImg} className="" height="250" alt="" />
+                                <div className="product-box">
+                                    <Link to={`/productDetails/${singleSales.id}`}>
+                                        <div className="product-media">
+                                            <img src={singleSales.productImg} className="" height="250" alt="" />
 
-                                        {/* cart hover section */}
+                                            {/* cart hover section */}
 
-                                        <div className="cart-hover-menu">
-                                            <div className="d-flex cart-hover-content">
-                                                <div>
-                                                    <img src={searchImg} alt="" />
-                                                </div>
-                                                <div>
-                                                    <img src={favoriteImg} alt="" />
-                                                </div>
-                                                <div>
-                                                    <img src={cartImg} alt="" />
+                                            <div className="cart-hover-menu">
+                                                <div className="d-flex cart-hover-content">
+                                                    <div>
+                                                        <img src={searchImg} alt="" />
+                                                    </div>
+                                                    <div>
+                                                        <img src={favoriteImg} alt="" />
+                                                    </div>
+                                                    <div>
+                                                        <img src={cartImg} alt="" />
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                    </div>
-                                    <div>
-                                        <h6 className='product-title'>
-                                            {singleSales.productName}
-                                        </h6>
-                                        <h6 className='product-price'>$  {singleSales.productPrice}</h6>
-                                    </div>
-                                </Link>
+                                        </div>
+                                        <div>
+                                            <h6 className='product-title'>
+                                                {singleSales.productName}
+                                            </h6>
+                                            <h6 className='product-price'>$  {singleSales.productPrice}</h6>
+                                        </div>
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                    )
+                        )
                 }
 
 
