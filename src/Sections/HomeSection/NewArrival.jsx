@@ -10,7 +10,7 @@ const NewArrival = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/')
+        fetch('https://limitless-sierra-48789.herokuapp.com/')
             .then(res => res.json())
             .then(data => {
                 const Singleproduct = data.filter(categorys => categorys.category == "newArrivals");
