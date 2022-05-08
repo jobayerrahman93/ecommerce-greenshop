@@ -74,10 +74,15 @@
   color: var(--subtitle-color);
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .product-cart-area ul li.active {
   border: 3px solid var(--primary-color);
+}
+
+.product-cart-area ul li.inactive {
+  border: 3px solid var(--subtitle-color);
 }
 
 .product-details-section .plusBtn,

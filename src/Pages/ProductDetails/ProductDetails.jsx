@@ -49,6 +49,56 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
     }
 
 
+    const [productSize, setProductSize] = useState({
+        activeObject: null,
+        objects: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
+    });
+
+    // console.log(productSize);
+
+    const toggleActive = (index) => {
+        setProductSize({ ...productSize, activeObject: productSize.objects[index] })
+    }
+
+    // const location = useLocation();
+    // console.log(location);
+
+
+    // if (location.pathname == `/productDetails/${pDetails.id}`) {
+    //     setProductSize({ ...productSize, activeObject: productSize.objects[0] })
+    // }
+
+
+
+
+
+
+    const activeStyle = (index) => {
+        if (productSize.objects[index] === productSize.activeObject) {
+
+
+            return 'active'
+
+        }
+
+        else {
+            return 'inactive'
+        }
+    }
+
+
+    const sizeName = ["S", "M", "lg", "xl"];
+
+    const [sizeP, setSizep] = useState(sizeName);
+
+
+    // console.log(sizeP);
+
+    // sizeP.map(size => {
+
+    //     // setSizep(size);
+    //     console.log(size);
+    // })
 
 
     return (
@@ -129,14 +179,46 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
 
                                     <h6>Size:</h6>
 
+
+
                                     <div className="product-size mt-3">
+                                        <ul>
+
+
+                                            {
+                                                productSize.objects.map((elements, index) => (
+
+                                                    // console.log(elements, index);
+                                                    <li key={index} className={activeStyle(index)} onClick={() => { toggleActive(index) }}>
+
+
+                                                        {
+                                                            index == 0 && sizeName[index]
+                                                        }
+                                                        {
+                                                            index == 1 && sizeName[index]
+                                                        }
+                                                        {
+                                                            index == 2 && sizeName[index]
+                                                        }
+                                                        {
+                                                            index == 3 && sizeName[index]
+                                                        }
+                                                    </li>
+                                                ))
+                                            }
+
+
+                                        </ul>
+                                    </div>
+                                    {/* <div className="product-size mt-3">
                                         <ul>
                                             <li className='active'>S</li>
                                             <li>M</li>
                                             <li>L</li>
                                             <li>X</li>
                                         </ul>
-                                    </div>
+                                    </div> */}
 
                                     <div className='mt-4 row'>
 
