@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import AuthProvider from "./firebase/hook/AuthProvider";
 import Footer from "./Layout/Footer";
 import Navbar from "./Layout/Navbar";
 import Checkout from "./Pages/Checkout/Checkout";
@@ -51,6 +52,7 @@ function App() {
 
 
     <>
+      <AuthProvider>
       <BrowserRouter>
         <Navbar ></Navbar>
         <Routes>
@@ -78,6 +80,7 @@ function App() {
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
     </>
   );
 }

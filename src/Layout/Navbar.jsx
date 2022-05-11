@@ -1,9 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import useFirebase from "../firebase/hook/useFirebase";
 import logo from '../img/logo.png';
 import "./Navbar.css";
 
+
 const Navbar = () => {
+  const { users, logOut } = useFirebase();
+  console.log(users);
   return (
     <>
 
@@ -51,13 +55,22 @@ const Navbar = () => {
                 <i class="fa-solid fa-cart-shopping mx-4"></i>
 
 
-                <NavLink to='/login' style={{ textDecoration: 'none' }}> <button
-                  type="button"
-                  className=" text-white login_btn text-center d-flex justify-content-center"
-                >
-                  <i class="fa-solid fa-arrow-right-from-bracket me-1"></i>
-                  Login
-                </button></NavLink>
+                {
+
+                  users.email ? <button onClick={logOut} className=" text-white login_btn text-center d-flex justify-content-center">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket me-1"></i>
+
+                    Log Out</button> :
+
+
+                    <NavLink to='/login' style={{ textDecoration: 'none' }}> <button
+                      type="button"
+                      className=" text-white login_btn text-center d-flex justify-content-center"
+                    >
+                      <i class="fa-solid fa-arrow-right-from-bracket me-1"></i>
+                      Login
+                    </button></NavLink>}
               </div>
             </div>
           </div>

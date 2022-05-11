@@ -1,14 +1,31 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../firebase/hook/useAuth';
 import googleImg from '../../img/google.png';
 import './Login.css';
-
 const UserLogin = () => {
+
+    const { googleSignIn } = useAuth();
+
+    const googleLogin = () => {
+
+
+        googleSignIn();
+
+
+    }
+
+    const valueChange = (value) => {
+
+        // console.log(value);
+    }
+
+
     return (
         <div className='user-login mt-5'>
             <div className="userLogin-content-box">
                 <p className='login-title'>Enter your username and password to login.</p>
-                <input type="text" placeholder='jobayer@gmail.com' />
+                <input onBlur={(e) => valueChange(e.target.value)} type="text" placeholder='jobayer@gmail.com' />
                 <input className='mt-2 ' type="password" name="" id="" placeholder='password' />
                 <div className='forgetPass text-end'>
                     <NavLink to="">forget Password?</NavLink>
@@ -22,7 +39,7 @@ const UserLogin = () => {
 
 
                 <div className="loginWith">
-                    <button type='button' className='btn loginWithBtn'> <img src={googleImg} alt="" /> Login with Google</button>
+                    <button onClick={googleLogin} type='button' className='btn loginWithBtn'> <img src={googleImg} alt="" /> Login with Google</button>
                     <button type='button' className='btn loginWithBtn'> <i class="fa-brands fa-facebook-f"></i> Login with Google</button>
                 </div>
             </div>
