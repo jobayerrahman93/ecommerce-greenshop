@@ -42,6 +42,26 @@
   display: block;
   font-family: Font Awesome 5 Free;
 } */
+
+.cart-icon-div {
+  position: relative;
+}
+
+.cart-icon {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  top: -12px;
+  right: 7px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
 @media screen and (max-width: 991px) {
   .header-section .nav-item {
     margin-top: 10px;

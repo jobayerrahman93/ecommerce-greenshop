@@ -37,6 +37,7 @@ function App() {
   const [checkoutCartDtl,setCheckOutCartDtl]=useState({});
   const [cartTotalBalance,setcartTotalBalance]=useState(0);
   const [totalCart,setTotalCart]=useState(0);
+  
 
   const checkoutDetails=(cartDetails,totalBalance,totalCart)=>{
     console.log(cartDetails, totalBalance,totalCart, "come in");
@@ -47,6 +48,18 @@ function App() {
 
     
   }
+
+
+  const [cartNum, setCartNum] = useState(0);
+  console.log(cartNum);
+
+  // console.log(cartCount);
+
+  // const cartTotal=(value)=>{
+  //   console.log(value);
+  // }
+
+  
   
   return (
 
@@ -54,12 +67,12 @@ function App() {
     <>
       <AuthProvider>
       <BrowserRouter>
-        <Navbar ></Navbar>
+        <Navbar cartNum={cartNum} ></Navbar>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="allPlants" element={<AllPlants />}></Route>
-            <Route path="newArrival" element={<NewArrival />}></Route>
-            <Route path="sales" element={<Sales />}></Route>
+          <Route path="/" element={<Home setCartNum={setCartNum} />}>
+            <Route path="allPlants" element={<AllPlants  />}></Route>
+            <Route path="newArrival" element={<NewArrival setCartNum={setCartNum} />}></Route>
+            <Route path="sales" element={<Sales setCartNum={setCartNum} />}></Route>
           </Route>
 
           <Route path="/blogs" element={<Blogs />}></Route>
@@ -71,7 +84,7 @@ function App() {
 
           <Route path="/login" element={<Login />}>
             <Route path="register" element={<Register />}></Route>
-            <Route path="UserLogin" element={<UserLogin />}></Route>
+            <Route path="UserLogin" element={<UserLogin hello="fuck"  />}></Route>
           </Route>
 
           <Route path="/product-cart" element={<ProductCart cartfromDetails={cartfromDetails} pastCartTotal={pastCartTotal} checkoutDetails={checkoutDetails} />}></Route>

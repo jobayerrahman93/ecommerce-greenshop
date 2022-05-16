@@ -6,7 +6,7 @@ import p5 from '../../img/p5.png';
 import AllPlants from './AllPlants';
 import './ProductSection.css';
 
-const ProductSection = () => {
+const ProductSection = ({ setCartNum }) => {
 
     const location = useLocation();
 
@@ -178,7 +178,7 @@ const ProductSection = () => {
                             {
 
 
-                                location.pathname == '/' ? <AllPlants></AllPlants> : <Outlet></Outlet>
+                                location.pathname == '/' ? <AllPlants setCartNum={setCartNum}></AllPlants> : <Outlet></Outlet>
                             }
 
 

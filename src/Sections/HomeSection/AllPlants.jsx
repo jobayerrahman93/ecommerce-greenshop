@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../firebase/hook/useAuth';
 import cartImg from '../../img/cart.png';
 import favoriteImg from '../../img/favorite.png';
 import searchImg from '../../img/search.png';
 import './AllPlants.css';
 
-const AllPlants = () => {
+const AllPlants = ({ setCartNum }) => {
+
+    const { users } = useAuth();
+
+    console.log(users);
+
+    const navigate = useNavigate();
 
     const [products, setProducts] = useState([]);
 
@@ -15,6 +22,59 @@ const AllPlants = () => {
             .then(data => setProducts(data));
     }, []);
 
+
+
+    const cartProduct = (cart) => {
+
+        const { productName, productPrice } = cart;
+
+        const cartProduct = {
+            productName,
+            productPrice,
+            email: users.email
+        }
+
+        console.log(cartProduct);
+
+
+        fetch('http://localhost:5000/', {
+
+            method: 'POST',
+            headers: {
+
+                'Content-Type': 'application/json',
+
+            },
+            body: JSON.stringify(cartProduct),
+
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('inserted Successfully', data);
+                fetch('http://localhost:5000/cart')
+                    .then(res => res.json())
+                    .then(data => setCartNum(data.length));
+
+            }
+
+            );
+
+    }
+
+
+    useEffect(() => {
+        fetch('http://localhost:5000/cart')
+            .then(res => res.json())
+            .then(data => setCartNum(data.length));
+
+
+    }, []);
+
+
+    // useEffect(() => {
+    //     cartTotal(cartNum)
+    // }, [])
 
 
     return (
@@ -29,41 +89,48 @@ const AllPlants = () => {
                         products.map(singleProduct =>
                             <div className="col-lg-4 col-md-6 mb-5">
                                 <div className="product-box">
-                                    <Link to={`/productDetails/${singleProduct.id}`} >
-
-                                        <div className="product-media">
-                                            <img src={singleProduct.productImg} className="w-100" height="250" alt="" />
+                                    <div className="product-media">
+                                        <img src={singleProduct.productImg} className="w-100" height="250" alt="" />
 
 
-                                            {/* cart hover section */}
+                                        {/* cart hover section */}
 
-                                            <div className="cart-hover-menu">
-                                                <div className="d-flex cart-hover-content">
-                                                    <div>
-                                                        <img src={searchImg} alt="" />
-                                                    </div>
-                                                    <div>
-                                                        <img src={favoriteImg} alt="" />
-                                                    </div>
-                                                    <div>
-                                                        <img src={cartImg} alt="" />
-                                                    </div>
+                                        <div className="cart-hover-menu">
+                                            <div className="d-flex cart-hover-content">
+                                                <div>
+                                                    <img src={searchImg} alt="" />
+                                                </div>
+                                                <div>
+                                                    <img src={favoriteImg} alt="" />
+
+                                                    {/* <i class="fa-solid fa-heart"></i> */}
+
+                                                </div>
+                                                <div>
+                                                    <img onClick={() => { users.email ? cartProduct(singleProduct) : navigate("/login") }} src={cartImg} alt="" />
                                                 </div>
                                             </div>
-
                                         </div>
 
+                                    </div>
 
 
-                                        <div className='mt-3'>
+
+                                    <div className='mt-3'>
+
+
+                                        <Link to={`/productDetails/${singleProduct.id}`} >
+
                                             <h6 className='product-title'>{singleProduct.productName}</h6>
-                                            <h6 className='product-price'>$ <span>
-                                                {singleProduct.productPrice}</span></h6>
-                                        </div>
+                                        </Link>
+
+                                        <h6 className='product-price'>$ <span>
+                                            {singleProduct.productPrice}</span></h6>
+                                    </div>
 
 
 
-                                    </Link>
+
 
 
                                 </div>

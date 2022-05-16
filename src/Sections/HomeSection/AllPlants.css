@@ -34,3 +34,8 @@
 .product-box {
   cursor: pointer;
 }
+
+.cart-hover-menu .fa-heart {
+  font-size: 18px;
+  color: var(--primary-color);
+}

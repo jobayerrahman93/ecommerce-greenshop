@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import useFirebase from "../firebase/hook/useFirebase";
 import logo from '../img/logo.png';
 import "./Navbar.css";
 
 
-const Navbar = () => {
+const Navbar = ({ cartNum }) => {
   const { users, logOut } = useFirebase();
-  console.log(users);
+  // console.log(users);
+
+  console.log(cartNum);
+
+
+  const [totalCart, setTotalCart] = useState(0)
+
+
+  useEffect(() => {
+    fetch('http://localhost:5000/cart')
+      .then(res => res.json())
+      .then(data => {
+        if (users.email) {
+          const userCartProduct = data.filter(userCart => userCart.email === users.email);
+          console.log(userCartProduct);
+          setTotalCart(userCartProduct.length)
+        }
+        else {
+          setTotalCart(0)
+        }
+      })
+  }, [cartNum, users.email])
+
+
   return (
     <>
 
@@ -52,7 +75,17 @@ const Navbar = () => {
             <div>
               <div className="d-flex justify-content-center align-items-center">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-cart-shopping mx-4"></i>
+                <div>
+                  <div className="">
+                    <div className="cart-icon-div">
+                      <i class="fa-solid fa-cart-shopping mx-4 "></i>
+                      <div className="cart-icon">{totalCart}</div>
+                    </div>
+
+
+
+                  </div>
+                </div>
 
 
                 {
