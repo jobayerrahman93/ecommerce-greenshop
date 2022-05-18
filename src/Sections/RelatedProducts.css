@@ -26,11 +26,11 @@
   overflow-x: hidden;
 }
 
-.related-product-section .single-slide {
+.related-product-section .slick-slider .slick-list .slick-slide .single-slide {
   padding: 0 10px;
 }
 
-.related-product-section .slick-list {
+.related-product-section > .slick-slider > .slick-list {
   margin: 0 -10px;
 }
 
