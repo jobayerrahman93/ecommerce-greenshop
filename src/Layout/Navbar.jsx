@@ -9,7 +9,7 @@ const Navbar = ({ cartNum }) => {
   const { users, logOut } = useFirebase();
   // console.log(users);
 
-  console.log(cartNum);
+  // console.log(cartNum);
 
 
   const [totalCart, setTotalCart] = useState(0)

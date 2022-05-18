@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import useAuth from '../../firebase/hook/useAuth';
 import googleImg from '../../img/google.png';
 import './Login.css';
@@ -20,6 +20,18 @@ const UserLogin = () => {
 
         // console.log(value);
     }
+
+
+    const location = useLocation();
+
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant',
+        })
+    }, [location]);
 
 
     return (

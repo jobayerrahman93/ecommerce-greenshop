@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import './Login.css';
 import UserLogin from './UserLogin';
 
 const Login = () => {
 
+
+
     const location = useLocation();
 
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant',
+        })
+    }, [location]);
 
 
 

@@ -110,7 +110,7 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
             left: 0,
             behavior: 'instant',
         })
-    }, [location])
+    }, [location]);
 
 
     return (
