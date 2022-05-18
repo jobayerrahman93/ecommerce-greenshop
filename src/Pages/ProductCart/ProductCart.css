@@ -108,3 +108,13 @@
 
   box-shadow: none;
 }
+
+@media screen and (max-width: 480px) {
+  .products-cart-section .table tr {
+    font-size: 11px;
+  }
+
+  .products-cart-section .table tr td {
+    font-size: 11px;
+  }
+}

@@ -13,7 +13,7 @@ const useFirebase = () => {
     const [errors,setErrors]=useState({});
 
 
-    console.log(users);
+    // console.log(users);
 
 
     const provider = new GoogleAuthProvider();

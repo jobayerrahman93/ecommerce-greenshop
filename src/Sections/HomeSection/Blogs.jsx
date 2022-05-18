@@ -20,9 +20,9 @@ const Blogs = () => {
                         </div>
                         <div className="blog-des p-2">
                             <p className='blog-date'>September 12  | Read in 6 minutes</p>
-                            <h3 className='blogs-post-title'>Cactus & Succulent
+                            <h3 className='blogs-post-title mt-3'>Cactus & Succulent
                                 Care Tips</h3>
-                            <p className='blogs-post-details'>Cacti are succulents are easy care plants for any home or patio. </p>
+                            <p className='blogs-post-details my-3'>Cacti are succulents are easy care plants for any home or patio. </p>
 
                             <NavLink to="/">Read More  <i class="fa-solid fa-arrow-right"></i> </NavLink>
                         </div>

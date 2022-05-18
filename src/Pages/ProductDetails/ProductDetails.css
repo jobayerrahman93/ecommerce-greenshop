@@ -196,11 +196,11 @@
 }
 
 .product-details-section .product-social-icon a i {
-  color: var(--blackish-color);
+  color: var(--primary-color);
 }
 
 .product-details-section .product-social-icon a i:hover {
-  color: var(--primary-color);
+  color: var(--blackish-color);
 }
 
 @media screen and (max-width: 480px) {
@@ -239,9 +239,9 @@
   }
   .plusBtn,
   .minusBtn {
-    height: 30px !important;
-    width: 30px !important;
-    font-size: 20px !important;
+    height: 25px !important;
+    width: 25px !important;
+    font-size: 15px !important;
   }
   .cartValue {
     font-size: 20px;
@@ -252,5 +252,9 @@
 
   .product-details-section .product-details-tab {
     padding: 0 10px !important;
+  }
+
+  .nav-tabs .nav-link {
+    margin-right: 10px;
   }
 }

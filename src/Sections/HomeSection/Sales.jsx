@@ -48,10 +48,10 @@ const Sales = ({ setCartNum }) => {
             email: users.email
         }
 
-        console.log(cartProduct);
+        // console.log(cartProduct);
 
 
-        fetch('http://localhost:5000/', {
+        fetch('https://limitless-sierra-48789.herokuapp.com/', {
 
             method: 'POST',
             headers: {
@@ -66,7 +66,7 @@ const Sales = ({ setCartNum }) => {
             .then(res => res.json())
             .then(data => {
                 console.log('inserted Successfully', data);
-                fetch('http://localhost:5000/cart')
+                fetch('https://limitless-sierra-48789.herokuapp.com/cart')
                     .then(res => res.json())
                     .then(data => setCartNum(data.length));
 
@@ -78,7 +78,7 @@ const Sales = ({ setCartNum }) => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/cart')
+        fetch('https://limitless-sierra-48789.herokuapp.com/cart')
             .then(res => res.json())
             .then(data => setCartNum(data.length));
 

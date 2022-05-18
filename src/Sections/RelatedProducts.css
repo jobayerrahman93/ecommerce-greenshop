@@ -21,3 +21,19 @@
   margin: 8px 0 44px 0;
   color: gray;
 }
+
+.related-product-section {
+  overflow-x: hidden;
+}
+
+.related-product-section .single-slide {
+  padding: 0 10px;
+}
+
+.related-product-section .slick-list {
+  margin: 0 -10px;
+}
+
+.related-product .product-media .productImg {
+  height: 200px;
+}

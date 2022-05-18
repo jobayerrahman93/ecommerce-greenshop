@@ -16,7 +16,7 @@ const Navbar = ({ cartNum }) => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/cart')
+    fetch('https://limitless-sierra-48789.herokuapp.com/cart')
       .then(res => res.json())
       .then(data => {
         if (users.email) {
@@ -78,7 +78,7 @@ const Navbar = ({ cartNum }) => {
                 <div>
                   <div className="">
                     <div className="cart-icon-div">
-                      <i class="fa-solid fa-cart-shopping mx-4 "></i>
+                      <i class="fa-solid fa-cart-shopping mx-5 "></i>
                       <div className="cart-icon">{totalCart}</div>
                     </div>
 

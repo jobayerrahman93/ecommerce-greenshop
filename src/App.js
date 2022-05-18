@@ -4,6 +4,7 @@ import "./App.css";
 import AuthProvider from "./firebase/hook/AuthProvider";
 import Footer from "./Layout/Footer";
 import Navbar from "./Layout/Navbar";
+import BlogPage from "./Pages/BlogPage/BlogPage";
 import Checkout from "./Pages/Checkout/Checkout";
 import Confirmation from "./Pages/Confirmation/Confirmation";
 import Home from "./Pages/Home/Home";
@@ -13,7 +14,6 @@ import UserLogin from "./Pages/Login/UserLogin";
 import ProductCart from './Pages/ProductCart/ProductCart.jsx';
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import AllPlants from "./Sections/HomeSection/AllPlants";
-import Blogs from "./Sections/HomeSection/Blogs";
 import NewArrival from "./Sections/HomeSection/NewArrival";
 import Sales from "./Sections/HomeSection/Sales";
 
@@ -40,7 +40,7 @@ function App() {
   
 
   const checkoutDetails=(cartDetails,totalBalance,totalCart)=>{
-    console.log(cartDetails, totalBalance,totalCart, "come in");
+    // console.log(cartDetails, totalBalance,totalCart, "come in");
 
     setCheckOutCartDtl(cartDetails);
     setcartTotalBalance(totalBalance);
@@ -51,7 +51,7 @@ function App() {
 
 
   const [cartNum, setCartNum] = useState(0);
-  console.log(cartNum);
+  // console.log(cartNum);
 
   // console.log(cartCount);
 
@@ -75,7 +75,7 @@ function App() {
             <Route path="sales" element={<Sales setCartNum={setCartNum} />}></Route>
           </Route>
 
-          <Route path="/blogs" element={<Blogs />}></Route>
+          <Route path="/blogs" element={<BlogPage></BlogPage>}></Route>
 
           <Route
             path="/productDetails/:id"

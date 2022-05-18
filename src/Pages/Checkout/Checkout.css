@@ -177,6 +177,10 @@
   color: #ffffff;
 }
 
+.checkout-section {
+  overflow-x: hidden;
+}
+
 @media screen and (max-width: 991px) {
   .orders-checkout img {
     display: none;

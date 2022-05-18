@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import imgVariant1 from '../../img/product-details-img.png';
 import RelatedProducts from '../../Sections/RelatedProducts';
 import './ProductDetails.css';
@@ -30,7 +30,7 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
 
 
     const [totalCart, setTotalCart] = useState(1);
-    console.log(totalCart);
+    // console.log(totalCart);
 
     const totalCartNumberPlus = () => {
 
@@ -99,6 +99,18 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
     //     // setSizep(size);
     //     console.log(size);
     // })
+
+
+    const location = useLocation();
+
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant',
+        })
+    }, [location])
 
 
     return (

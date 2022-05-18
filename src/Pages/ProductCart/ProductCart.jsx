@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import RelatedProducts from '../../Sections/RelatedProducts';
 import './ProductCart.css';
 const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
@@ -7,7 +7,7 @@ const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
 
     const [totalCart, setTotalCart] = useState(pastCartTotal);
     const [totalCartPrice, setTotalCartPrice] = useState(cartfromDetails.productPrice);
-    console.log(cartfromDetails);
+    // console.log(cartfromDetails);
 
 
     const cartPlus = () => {
@@ -27,7 +27,7 @@ const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
 
     }
 
-    console.log(totalCart);
+    // console.log(totalCart);
 
 
     // const location = useLocation();
@@ -50,6 +50,17 @@ const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
     let totalBalance = totalCartPrice + shippingCharge;
 
 
+    const location = useLocation();
+
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant',
+        })
+    }, [location])
+
     return (
         <>
             <section className='products-cart-section'>
@@ -62,30 +73,31 @@ const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
 
                     <div className="row">
                         <div className="col-lg-8">
-                            <table class="table table-responsive table-borderless align-middle">
-                                <thead>
-                                    <tr >
-                                        <th scope="col">Products</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">Quantity</th>
-                                        <th scope="col">Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="spacer highlighted">
+                            <div className="table-responsive">
+                                <table class="table table-responsive table-borderless align-middle">
+                                    <thead>
+                                        <tr >
+                                            <th scope="col">Products</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="spacer highlighted">
 
-                                        <td>{cartfromDetails.productName}</td>
-                                        <td>{cartfromDetails.productPrice}</td>
-                                        <td>
-                                            <div className='d-flex'>
-                                                <button onClick={cartMinus} className='minusBtn'>-</button>
-                                                <input defaultValue="0" value={totalCart} className='cartValue' type="text" />
-                                                <button onClick={cartPlus} className='plusBtn'>+</button>
-                                            </div>
-                                        </td>
-                                        <td className='table-price'>$ <span>{totalCartPrice}</span></td>
-                                    </tr>
-                                    {/* <tr>
+                                            <td>{cartfromDetails.productName}</td>
+                                            <td>{cartfromDetails.productPrice}</td>
+                                            <td>
+                                                <div className='d-flex'>
+                                                    <button onClick={cartMinus} className='minusBtn'>-</button>
+                                                    <input defaultValue="0" value={totalCart} className='cartValue' type="text" />
+                                                    <button onClick={cartPlus} className='plusBtn'>+</button>
+                                                </div>
+                                            </td>
+                                            <td className='table-price'>$ <span>{totalCartPrice}</span></td>
+                                        </tr>
+                                        {/* <tr>
 
                                         <td>Blushing Bromeliad</td>
                                         <td>238.00</td>
@@ -99,8 +111,9 @@ const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
                                         <td className='table-price'>$ <span>238.00</span></td>
                                     </tr> */}
 
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         <div className="col-lg-4">
