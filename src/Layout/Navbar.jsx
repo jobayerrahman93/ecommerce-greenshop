@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import useFirebase from "../firebase/hook/useFirebase";
 import logo from '../img/logo.png';
 import "./Navbar.css";
@@ -28,7 +28,11 @@ const Navbar = ({ cartNum }) => {
           setTotalCart(0)
         }
       })
-  }, [cartNum, users.email])
+  }, [cartNum, users.email]);
+
+
+  const location = useLocation();
+  // console.log(location);
 
 
   return (
@@ -53,20 +57,23 @@ const Navbar = ({ cartNum }) => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/">
+                {location.pathname == "/" ? <NavLink className="nav-link active" aria-current="page" to="/">
                   Home
-                </NavLink>
+                </NavLink> :
+                  <NavLink className="nav-link" aria-current="page" to="/">
+                    Home
+                  </NavLink>}
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="">
+                <NavLink className="nav-link" to="/shop">
                   Shop
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink className="nav-link" to="">
                   Plant Care
                 </NavLink>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <NavLink className="nav-link " to="/blogs">Blogs</NavLink>
               </li>
