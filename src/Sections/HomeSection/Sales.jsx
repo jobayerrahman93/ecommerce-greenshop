@@ -9,7 +9,7 @@ const Sales = ({ setCartNum }) => {
 
     const { users } = useAuth();
 
-    console.log(users);
+    // console.log(users);
 
     const navigate = useNavigate();
 
@@ -92,12 +92,12 @@ const Sales = ({ setCartNum }) => {
             <div className="row mt-5">
 
                 {
-                    salesProduct == '' ? <div class="spinner-border text-success text-center mx-auto my-5" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    salesProduct == '' ? <div className="spinner-border text-success text-center mx-auto my-5" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                         :
                         salesProduct.map(singleSales =>
-                            <div className="col-lg-4">
+                            <div key={singleSales.id} className="col-lg-4">
 
                                 <div className="product-box">
 

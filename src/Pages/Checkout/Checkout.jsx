@@ -33,24 +33,24 @@ const Checkout = ({ cartTotalBalance, checkoutCartDtl, totalCart }) => {
 
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">First Name <span>*</span> </label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">First Name <span>*</span> </label>
+                                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">Last Name <span>*</span> </label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Last Name <span>*</span> </label>
+                                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
+                                        <div className="billing-info-box">
 
-                                            <label for="exampleFormControlInput1" class="form-label">Country/Region <span>*</span> </label>
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Country/Region <span>*</span> </label>
 
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Select country / region</option>
+                                            <select className="form-select" aria-label="Default select example">
+                                                <option defaultValue={'default'}>Select country / region</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
@@ -58,29 +58,29 @@ const Checkout = ({ cartTotalBalance, checkoutCartDtl, totalCart }) => {
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">Town/City <span>*</span> </label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Town/City <span>*</span> </label>
+                                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">Street Address <span>*</span> </label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Street Address <span>*</span> </label>
+                                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">Optional</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apartment/suite, unit" />
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Optional</label>
+                                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Apartment/suite, unit" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">State <span>*</span> </label>
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">State <span>*</span> </label>
 
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Select state</option>
+                                            <select className="form-select" aria-label="Default select example">
+                                                <option defaultValue={'default'}>Select state</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
@@ -88,36 +88,36 @@ const Checkout = ({ cartTotalBalance, checkoutCartDtl, totalCart }) => {
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">Zip <span>*</span> </label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Zip <span>*</span> </label>
+                                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">Email <span>*</span> </label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example:jobayer@gmail.com" />
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Email <span>*</span> </label>
+                                            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="example:jobayer@gmail.com" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div class="billing-info-box">
-                                            <label for="exampleFormControlInput1" class="form-label">Phone Number <span>*</span> </label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                        <div className="billing-info-box">
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Phone Number <span>*</span> </label>
+                                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
                                         </div>
                                     </div>
 
-                                    <div class="form-check ms-2 d-flex align-items-center">
-                                        <input class="form-check-input" type="radio" name="" id="flexRadioDefault1" />
-                                        <label class="form-check-label different-address " for="flexRadioDefault1">
+                                    <div className="form-check ms-2 d-flex align-items-center">
+                                        <input className="form-check-input" type="radio" name="" id="flexRadioDefault1" />
+                                        <label className="form-check-label different-address " htmlFor="flexRadioDefault1">
                                             Ship to different address ?
                                         </label>
                                     </div>
 
 
 
-                                    <div class="mt-3 col-lg-6">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Order notes (optional)</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <div className="mt-3 col-lg-6">
+                                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Order notes (optional)</label>
+                                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
 
                                 </div>
@@ -194,23 +194,23 @@ const Checkout = ({ cartTotalBalance, checkoutCartDtl, totalCart }) => {
 
                                         <h2 className='payment-method-title'>Payment Method</h2>
 
-                                        <div class="form-check mb-4 payment-form">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
-                                            <label class="form-check-label different-address " for="flexRadioDefault2">
+                                        <div className="form-check mb-4 payment-form">
+                                            <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                                            <label className="form-check-label different-address " htmlFor="flexRadioDefault2">
                                                 <img src={paymentImg} alt="" />
                                             </label>
                                         </div>
 
-                                        <div class="form-check mb-4 payment-form">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
-                                            <label class="form-check-label different-address " for="flexRadioDefault3">
+                                        <div className="form-check mb-4 payment-form">
+                                            <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
+                                            <label className="form-check-label different-address " htmlFor="flexRadioDefault3">
                                                 Direct Bank Transfer
                                             </label>
                                         </div>
 
-                                        <div class="form-check mb-5 payment-form">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" />
-                                            <label class="form-check-label different-address " for="flexRadioDefault4">
+                                        <div className="form-check mb-5 payment-form">
+                                            <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" />
+                                            <label className="form-check-label different-address " htmlFor="flexRadioDefault4">
                                                 Cash on delivery
                                             </label>
                                         </div>

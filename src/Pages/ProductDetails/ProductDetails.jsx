@@ -168,11 +168,11 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
                                         </div>
                                         <div className='d-flex total-customer-review align-items-center'>
                                             <div className='me-2'>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star-half-stroke"></i>
                                             </div>
                                             <div >
                                                 <p><span>19</span> customers review</p>
@@ -254,7 +254,7 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
                                                 <button className="addToCartBtn ms-3">add to cart</button>
 
                                                 <button type='button' className='favoriteBtn ms-3'>
-                                                    <i class="fa-solid fa-heart"></i>
+                                                    <i className="fa-solid fa-heart"></i>
 
 
                                                 </button>
@@ -276,20 +276,20 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
                                         <p><span>Tags:</span> Home, Garden, Plants</p>
 
                                         <div className='share-section'>
-                                            <p>Share this products:
+                                            <div>Share this products:
 
-                                                <div class="product-social-icon d-inline">
-                                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <div className="product-social-icon d-inline">
+                                                    <a href="#"><i className="fab fa-facebook-f"></i></a>
+                                                    <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                                                    <a href="#"><i className="fab fa-twitter"></i></a>
 
-                                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                                    <a href="#"><i className="fab fa-instagram"></i></a>
 
 
                                                 </div>
 
 
-                                            </p>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -307,18 +307,18 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
                         {/* details nav tabs area */}
 
 
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Product Description</a>
+                        <ul className="nav nav-tabs" id="myTab" role="tablist">
+                            <li className="nav-item" role="presentation">
+                                <a className="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Product Description</a>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Reviews (<span>0</span>)</a>
+                            <li className="nav-item" role="presentation">
+                                <a className="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Reviews (<span>0</span>)</a>
                             </li>
 
                         </ul>
                         <div className='my-5 px-0 product-details-tab'>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div className="tab-content" id="myTabContent">
+                                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
 
                                     <p>
@@ -332,7 +332,7 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
 
 
                                 </div>
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Review not found</div>
+                                <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Review not found</div>
                             </div>
 
                         </div>

@@ -91,12 +91,12 @@ const NewArrival = ({ setCartNum }) => {
 
 
                 {
-                    arrivalProduct == '' ? <div class="spinner-border text-success text-center mx-auto my-5" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    arrivalProduct == '' ? <div className="spinner-border text-success text-center mx-auto my-5" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                         :
                         arrivalProduct.map((singleArrival) =>
-                            <div className="col-lg-4 col-md-6">
+                            <div key={singleArrival.id} className="col-lg-4 col-md-6">
                                 <div className="product-box">
 
 

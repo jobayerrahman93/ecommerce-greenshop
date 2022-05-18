@@ -35,50 +35,50 @@ const Navbar = ({ cartNum }) => {
     <>
 
 
-      <nav class="navbar header-section navbar-expand-lg navbar-light bg-white sticky-lg-top">
-        <div class="container">
+      <nav className="navbar header-section navbar-expand-lg navbar-light bg-white sticky-lg-top">
+        <div className="container">
           <NavLink className="navbar-brand" to="/">
             <img
               src={logo}
               alt=""
               width="34"
               height="34"
-              class="d-inline-block align-text-top me-2"
+              className="d-inline-block align-text-top me-2"
             />
             Green Shop
           </NavLink>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <NavLink class="nav-link active" aria-current="page" to="/">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item">
+                <NavLink className="nav-link active" aria-current="page" to="/">
                   Home
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <NavLink class="nav-link" to="">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="">
                   Shop
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <NavLink class="nav-link" to="">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="">
                   Plant Care
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <NavLink class="nav-link " to="/blogs">Blogs</NavLink>
+              <li className="nav-item">
+                <NavLink className="nav-link " to="/blogs">Blogs</NavLink>
               </li>
             </ul>
 
             <div>
               <div className="d-flex justify-content-center align-items-center">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
                 <div>
                   <div className="">
                     <div className="cart-icon-div">
-                      <i class="fa-solid fa-cart-shopping mx-5 "></i>
+                      <i className="fa-solid fa-cart-shopping mx-5 "></i>
                       <div className="cart-icon">{totalCart}</div>
                     </div>
 
@@ -92,7 +92,7 @@ const Navbar = ({ cartNum }) => {
 
                   users.email ? <button onClick={logOut} className=" text-white login_btn text-center d-flex justify-content-center">
 
-                    <i class="fa-solid fa-arrow-right-from-bracket me-1"></i>
+                    <i className="fa-solid fa-arrow-right-from-bracket me-1"></i>
 
                     Log Out</button> :
 
@@ -101,7 +101,7 @@ const Navbar = ({ cartNum }) => {
                       type="button"
                       className=" text-white login_btn text-center d-flex justify-content-center"
                     >
-                      <i class="fa-solid fa-arrow-right-from-bracket me-1"></i>
+                      <i className="fa-solid fa-arrow-right-from-bracket me-1"></i>
                       Login
                     </button></NavLink>}
               </div>

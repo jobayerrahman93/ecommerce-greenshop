@@ -74,7 +74,7 @@ const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
                     <div className="row">
                         <div className="col-lg-8">
                             <div className="table-responsive">
-                                <table class="table table-responsive table-borderless align-middle">
+                                <table className="table table-responsive table-borderless align-middle">
                                     <thead>
                                         <tr >
                                             <th scope="col">Products</th>
@@ -84,7 +84,7 @@ const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="spacer highlighted">
+                                        <tr className="spacer highlighted">
 
                                             <td>{cartfromDetails.productName}</td>
                                             <td>{cartfromDetails.productPrice}</td>
@@ -123,9 +123,9 @@ const ProductCart = ({ cartfromDetails, pastCartTotal, checkoutDetails }) => {
                                 <hr />
                                 <p className='mb-3'>Coupon Apply</p>
 
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control apply-input" placeholder="Enter cupon code here" aria-label="" aria-describedby="button-addon2" />
-                                    <button class="btn apply-btn" type="button" id="button-addon2">Apply</button>
+                                <div className="input-group mb-3">
+                                    <input type="text" className="form-control apply-input" placeholder="Enter cupon code here" aria-label="" aria-describedby="button-addon2" />
+                                    <button className="btn apply-btn" type="button" id="button-addon2">Apply</button>
                                 </div>
 
 

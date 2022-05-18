@@ -59,9 +59,9 @@ const Footer = () => {
                                 <h3 className='newsletter-subscribe-title'>Would you like to join newsletters?</h3>
 
 
-                                <div class="input-group subscribe-input-group">
-                                    <input type="text" class="form-control " placeholder="Enter your email address" aria-label="Enter your email address" aria-describedby="button-addon2" />
-                                    <button class="btn newsletter-subscribe-btn" type="button" id="button-addon2">Button</button>
+                                <div className="input-group subscribe-input-group">
+                                    <input type="text" className="form-control " placeholder="Enter your email address" aria-label="Enter your email address" aria-describedby="button-addon2" />
+                                    <button className="btn newsletter-subscribe-btn" type="button" id="button-addon2">Button</button>
                                 </div>
 
                                 <p className='newsletter-subscribe-des'>We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours! </p>

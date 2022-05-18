@@ -30,7 +30,7 @@ const Confirmation = () => {
                         </h1>
 
                         <Link to="/">
-                            <p className='main-color mt-4 text-center d-flex align-items-center'>Continue Shopping <i class="fa-solid fa-arrow-right-long ms-2"></i></p>
+                            <p className='main-color mt-4 text-center d-flex align-items-center'>Continue Shopping <i className="fa-solid fa-arrow-right-long ms-2"></i></p>
                         </Link>
                     </div>
 

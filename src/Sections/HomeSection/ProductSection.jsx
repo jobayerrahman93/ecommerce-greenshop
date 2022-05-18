@@ -165,8 +165,8 @@ const ProductSection = ({ setCartNum }) => {
 
                                 <div className='ms-auto d-flex align-items-center sortBySide'>
                                     <p className='mb-0 me-2 short-by'>Sort By: </p>
-                                    <select class="form-select filter-form-select" aria-label="Default select example">
-                                        <option selected>Default Sorting</option>
+                                    <select className="form-select filter-form-select" aria-label="Default select example">
+                                        <option defaultValue={'default'}>Default Sorting</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
 
@@ -189,13 +189,13 @@ const ProductSection = ({ setCartNum }) => {
 
 
                         <nav aria-label="Page navigation example ">
-                            <ul class="pagination flex justify-content-end">
+                            <ul className="pagination flex justify-content-end">
 
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
+                                <li className="page-item"><a className="page-link" href="#">1</a></li>
+                                <li className="page-item"><a className="page-link" href="#">2</a></li>
+                                <li className="page-item"><a className="page-link" href="#">3</a></li>
+                                <li className="page-item">
+                                    <a className="page-link" href="#" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span>
                                     </a>
                                 </li>
@@ -217,7 +217,7 @@ const ProductSection = ({ setCartNum }) => {
                                 <h3 className='findPlants-title'>Summer Cactus Succulents</h3>
                                 <p className='findPlants-subTitle'>we are an online plant shop offering a wide range of cheap and trendy plants</p>
 
-                                <button className="findBtn btn">Find More <i class="fa-solid fa-arrow-right"></i></button>
+                                <button className="findBtn btn">Find More <i className="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -230,7 +230,7 @@ const ProductSection = ({ setCartNum }) => {
                                 <h3 className='findPlants-title'>Styling Trends & Much More</h3>
                                 <p className='findPlants-subTitle'>we are an online plant shop offering a wide range of cheap and trendy plants</p>
 
-                                <button className="findBtn btn">Find More <i class="fa-solid fa-arrow-right"></i></button>
+                                <button className="findBtn btn">Find More <i className="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>

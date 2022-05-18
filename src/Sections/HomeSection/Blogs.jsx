@@ -24,7 +24,7 @@ const Blogs = () => {
                                 Care Tips</h3>
                             <p className='blogs-post-details my-3'>Cacti are succulents are easy care plants for any home or patio. </p>
 
-                            <NavLink to="/">Read More  <i class="fa-solid fa-arrow-right"></i> </NavLink>
+                            <NavLink to="/">Read More  <i className="fa-solid fa-arrow-right"></i> </NavLink>
                         </div>
                     </div>
                 </div>

@@ -67,7 +67,7 @@ const RelatedProducts = () => {
 
                 <Slider {...settings}>
                     {
-                        products.map(singleP => <div className="single-slide">
+                        products.map(singleP => <div key={singleP.id} className="single-slide">
 
                             <div className="related-product">
                                 <div className="product-media">

@@ -82,12 +82,12 @@ const AllPlants = ({ setCartNum }) => {
             <div className="row mt-5">
 
                 {
-                    products == '' ? <div class="spinner-border text-success text-center mx-auto my-5" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    products == '' ? <div className="spinner-border text-success text-center mx-auto my-5" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                         :
                         products.map(singleProduct =>
-                            <div className="col-lg-4 col-md-6 mb-5">
+                            <div key={singleProduct.id} className="col-lg-4 col-md-6 mb-5">
                                 <div className="product-box">
                                     <div className="product-media">
                                         <img src={singleProduct.productImg} className="w-100" height="250" alt="" />
@@ -103,7 +103,7 @@ const AllPlants = ({ setCartNum }) => {
                                                 <div>
                                                     <img src={favoriteImg} alt="" />
 
-                                                    {/* <i class="fa-solid fa-heart"></i> */}
+                                                    {/* <i className="fa-solid fa-heart"></i> */}
 
                                                 </div>
                                                 <div>

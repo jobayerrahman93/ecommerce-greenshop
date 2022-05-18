@@ -53,7 +53,7 @@ const UserLogin = () => {
 
                 <div className="loginWith">
                     <button onClick={googleLogin} type='button' className='btn loginWithBtn'> <img src={googleImg} alt="" /> Login with Google</button>
-                    <button type='button' className='btn loginWithBtn'> <i class="fa-brands fa-facebook-f"></i> Login with Google</button>
+                    <button type='button' className='btn loginWithBtn'> <i className="fa-brands fa-facebook-f"></i> Login with Google</button>
                 </div>
             </div>
         </div>
