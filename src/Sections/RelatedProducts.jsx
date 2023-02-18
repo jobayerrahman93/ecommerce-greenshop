@@ -52,7 +52,7 @@ const RelatedProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://limitless-sierra-48789.herokuapp.com/')
+        fetch('https://ecoshop-server-7a6r.vercel.app/')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);

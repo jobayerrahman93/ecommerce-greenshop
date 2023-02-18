@@ -22,12 +22,8 @@ function App() {
 
   const [cartfromDetails,setCartfromDetails]=useState({});
   const [pastCartTotal,setPastCartTotal]=useState(0);
-  // console.log(cartfromDetails);
-
   
   const cartDetails=(cart,pdtl)=>{
-    // console.log("cart number",cart,pdtl);
-
     setCartfromDetails(pdtl);
     setPastCartTotal(cart);
   
@@ -40,8 +36,6 @@ function App() {
   
 
   const checkoutDetails=(cartDetails,totalBalance,totalCart)=>{
-    // console.log(cartDetails, totalBalance,totalCart, "come in");
-
     setCheckOutCartDtl(cartDetails);
     setcartTotalBalance(totalBalance);
     setTotalCart(totalCart);
@@ -51,47 +45,38 @@ function App() {
 
 
   const [cartNum, setCartNum] = useState(0);
-  // console.log(cartNum);
 
-  // console.log(cartCount);
-
-  // const cartTotal=(value)=>{
-  //   console.log(value);
-  // }
-
-  
-  
   return (
 
 
     <>
       <AuthProvider>
       <BrowserRouter>
-        <Navbar cartNum={cartNum} ></Navbar>
+        <Navbar cartNum={cartNum} />
         <Routes>
           <Route path="/" element={<Home setCartNum={setCartNum} />}>
-            <Route path="allPlants" element={<AllPlants  />}></Route>
-            <Route path="newArrival" element={<NewArrival setCartNum={setCartNum} />}></Route>
-            <Route path="sales" element={<Sales setCartNum={setCartNum} />}></Route>
+            <Route path="allPlants" element={<AllPlants  />}/>
+            <Route path="newArrival" element={<NewArrival setCartNum={setCartNum} />}/>
+            <Route path="sales" element={<Sales setCartNum={setCartNum} />}/>
           </Route>
 
-          <Route path="/blogs" element={<BlogPage></BlogPage>}></Route>
+          <Route path="/blogs" element={<BlogPage/>}/>
 
           <Route
             path="/productDetails/:id"
             element={<ProductDetails cartDetails={cartDetails} />}
-          ></Route>
+          />
 
           <Route path="/login" element={<Login />}>
-            <Route path="register" element={<Register />}></Route>
-            <Route path="UserLogin" element={<UserLogin hello="fuck"  />}></Route>
+            <Route path="register" element={<Register />}/>
+            <Route path="UserLogin" element={<UserLogin hello="fuck"  />}/>
           </Route>
 
-          <Route path="/product-cart" element={<ProductCart cartfromDetails={cartfromDetails} pastCartTotal={pastCartTotal} checkoutDetails={checkoutDetails} />}></Route>
-          <Route path="/checkout" element={<Checkout checkoutCartDtl={checkoutCartDtl} cartTotalBalance={cartTotalBalance} totalCart={totalCart} />}></Route>
-          <Route path="/confirmation" element={<Confirmation/>}></Route>
+          <Route path="/product-cart" element={<ProductCart cartfromDetails={cartfromDetails} pastCartTotal={pastCartTotal} checkoutDetails={checkoutDetails} />}/>
+          <Route path="/checkout" element={<Checkout checkoutCartDtl={checkoutCartDtl} cartTotalBalance={cartTotalBalance} totalCart={totalCart} />}/>
+          <Route path="/confirmation" element={<Confirmation/>}/>
         </Routes>
-        <Footer></Footer>
+        <Footer/>
       </BrowserRouter>
       </AuthProvider>
     </>

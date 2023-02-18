@@ -19,10 +19,10 @@ const NewArrival = ({ setCartNum }) => {
 
 
     useEffect(() => {
-        fetch('https://limitless-sierra-48789.herokuapp.com/')
+        fetch('https://ecoshop-server-7a6r.vercel.app/')
             .then(res => res.json())
             .then(data => {
-                const Singleproduct = data.filter(categorys => categorys.category == "newArrivals");
+                const Singleproduct = data.filter(categorys => categorys.category === "newArrivals");
 
 
 
@@ -45,10 +45,10 @@ const NewArrival = ({ setCartNum }) => {
             email: users.email
         }
 
-        // console.log(cartProduct);
 
 
-        fetch('https://limitless-sierra-48789.herokuapp.com/', {
+
+        fetch('https://ecoshop-server-7a6r.vercel.app/', {
 
             method: 'POST',
             headers: {
@@ -63,7 +63,7 @@ const NewArrival = ({ setCartNum }) => {
             .then(res => res.json())
             .then(data => {
                 console.log('inserted Successfully', data);
-                fetch('https://limitless-sierra-48789.herokuapp.com/cart')
+                fetch('https://ecoshop-server-7a6r.vercel.app/cart')
                     .then(res => res.json())
                     .then(data => setCartNum(data.length));
 
@@ -75,7 +75,7 @@ const NewArrival = ({ setCartNum }) => {
 
 
     useEffect(() => {
-        fetch('https://limitless-sierra-48789.herokuapp.com/cart')
+        fetch('https://ecoshop-server-7a6r.vercel.app/cart')
             .then(res => res.json())
             .then(data => setCartNum(data.length));
 

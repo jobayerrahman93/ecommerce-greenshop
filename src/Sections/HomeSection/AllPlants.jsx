@@ -10,18 +10,18 @@ const AllPlants = ({ setCartNum }) => {
 
     const { users } = useAuth();
 
-    // console.log(users);
-
     const navigate = useNavigate();
 
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://limitless-sierra-48789.herokuapp.com/')
+        fetch('https://ecoshop-server-7a6r.vercel.app/')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
 
+
+    console.log({ products })
 
 
     const cartProduct = (cart) => {
@@ -34,10 +34,8 @@ const AllPlants = ({ setCartNum }) => {
             email: users.email
         }
 
-        // console.log(cartProduct);
 
-
-        fetch('https://limitless-sierra-48789.herokuapp.com/', {
+        fetch('https://ecoshop-server-7a6r.vercel.app/', {
 
             method: 'POST',
             headers: {
@@ -46,13 +44,11 @@ const AllPlants = ({ setCartNum }) => {
 
             },
             body: JSON.stringify(cartProduct),
-
-
         })
             .then(res => res.json())
             .then(data => {
                 console.log('inserted Successfully', data);
-                fetch('https://limitless-sierra-48789.herokuapp.com/cart')
+                fetch('https://ecoshop-server-7a6r.vercel.app/cart')
                     .then(res => res.json())
                     .then(data => setCartNum(data.length));
 
@@ -64,17 +60,13 @@ const AllPlants = ({ setCartNum }) => {
 
 
     useEffect(() => {
-        fetch('https://limitless-sierra-48789.herokuapp.com/cart')
+        fetch('https://ecoshop-server-7a6r.vercel.app/cart')
             .then(res => res.json())
             .then(data => setCartNum(data.length));
-
 
     }, []);
 
 
-    // useEffect(() => {
-    //     cartTotal(cartNum)
-    // }, [])
 
 
     return (

@@ -13,13 +13,8 @@ const useFirebase = () => {
     const [errors,setErrors]=useState({});
 
 
-    // console.log(users);
-
-
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
-
-
 
     const googleSignIn=()=>{
 

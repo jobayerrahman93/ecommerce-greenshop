@@ -12,20 +12,19 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch('https://limitless-sierra-48789.herokuapp.com/')
+        fetch('https://ecoshop-server-7a6r.vercel.app/')
             .then(res => res.json())
             .then(data => {
                 const Singleproduct = data.filter(productImg => productImg.id == id);
 
                 Singleproduct.map(pd => setPDetails(pd))
             });
-    }, []);
+    }, [id]);
 
-    // console.log(pDetails);
+
 
 
     const { productName, productDes, productPrice, productImg } = pDetails;
-    // console.log(productName);
 
 
 
@@ -60,18 +59,6 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
         setProductSize({ ...productSize, activeObject: productSize.objects[index] })
     }
 
-    // const location = useLocation();
-    // console.log(location);
-
-
-    // if (location.pathname == `/productDetails/${pDetails.id}`) {
-    //     setProductSize({ ...productSize, activeObject: productSize.objects[0] })
-    // }
-
-
-
-
-
 
     const activeStyle = (index) => {
         if (productSize.objects[index] === productSize.activeObject) {
@@ -92,13 +79,6 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
     const [sizeP, setSizep] = useState(sizeName);
 
 
-    // console.log(sizeP);
-
-    // sizeP.map(size => {
-
-    //     // setSizep(size);
-    //     console.log(size);
-    // })
 
 
     const location = useLocation();
@@ -111,6 +91,24 @@ const ProductDetails = ({ setCart, setPastCartTotal, cartDetails }) => {
             behavior: 'instant',
         })
     }, [location]);
+
+
+
+    // console.log(sizeP);
+
+    // sizeP.map(size => {
+
+    //     // setSizep(size);
+    //     console.log(size);
+    // })
+
+    // const location = useLocation();
+    // console.log(location);
+
+
+    // if (location.pathname == `/productDetails/${pDetails.id}`) {
+    //     setProductSize({ ...productSize, activeObject: productSize.objects[0] })
+    // }
 
 
     return (

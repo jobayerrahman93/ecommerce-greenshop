@@ -16,7 +16,7 @@ const Navbar = ({ cartNum }) => {
 
 
   useEffect(() => {
-    fetch('https://limitless-sierra-48789.herokuapp.com/cart')
+    fetch('https://ecoshop-server-7a6r.vercel.app/cart')
       .then(res => res.json())
       .then(data => {
         if (users.email) {
@@ -65,15 +65,20 @@ const Navbar = ({ cartNum }) => {
                   </NavLink>}
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/shop">
-                  Shop
+                <NavLink className="nav-link" to="/productDetails/2">
+                  Product Details
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink className="nav-link" to="">
-                  Plant Care
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/product-cart">
+                  Cart
                 </NavLink>
-              </li> */}
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/checkout">
+                  Checkout
+                </NavLink>
+              </li>
               <li className="nav-item">
                 <NavLink className="nav-link " to="/blogs">Blogs</NavLink>
               </li>
